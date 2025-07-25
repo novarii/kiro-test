@@ -1,0 +1,10 @@
+{
+  "name": "Java Service Test Generator",
+  "description": "Automatically generate or update unit tests for Java service classes when saved",
+  "trigger": {
+    "type": "file_save",
+    "filePattern": "**/service/**/*Service.java"
+  },
+  "enabled": true,
+  "prompt": "I just saved a Java service class file: {{filePath}}\n\nPlease analyze this service class and:\n1. Generate or update the corresponding unit test file in the test directory\n2. Create comprehensive test methods for all public methods\n3. Use proper mocking with @MockBean for dependencies\n4. Follow the project's testing conventions from the steering files\n5. Include test cases for both success and error scenarios\n6. Use JUnit 5 and Mockito as specified in the tech stack\n7. Ensure proper test structure with @ExtendWith(MockitoExtension.class)\n8. Mock all repository and external service dependencies\n9. Test all business logic paths and edge cases\n10. Use meaningful test method names that describe what is being tested\n\nThe test file should be placed in the corresponding test directory structure (src/test/java/...) and follow the naming convention {ServiceName}Test.java\n\nMake sure to:\n- Import all necessary testing dependencies\n- Set up proper @Mock annotations for dependencies\n- Use @InjectMocks for the service under test\n- Include @BeforeEach setup methods if needed\n- Test both positive and negative scenarios\n- Verify interactions with mocked dependencies using verify()\n- Assert expected results and behaviors\n\nPlease create comprehensive, production-ready unit tests that provide good coverage of the service's functionality."
+}

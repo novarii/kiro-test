@@ -6,7 +6,7 @@
   - Configure application.properties for H2 database and JWT settings
   - _Requirements: 6.1, 6.7_
 
-- [ ] 2. Implement core entity models with JPA relationships
+- [x] 2. Implement core entity models with JPA relationships
   - Create User entity with proper validation and relationships
   - Create Account entity with AccountType enum and user relationship
   - Create Transaction entity with BigDecimal precision and relationships

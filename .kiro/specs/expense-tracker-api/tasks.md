@@ -13,7 +13,7 @@
   - Create Category entity with default category support
   - _Requirements: 2.1, 2.5, 3.1, 3.2_
 
-- [ ] 3. Create repository interfaces for data access
+- [x] 3. Create repository interfaces for data access
   - Implement UserRepository with email lookup methods
   - Implement AccountRepository with user-specific queries
   - Implement TransactionRepository with filtering and balance calculation queries

@@ -1,5 +1,9 @@
+com/fintech/expensetracker/repository/CategoryRepository.class
 com/fintech/expensetracker/entity/Transaction.class
+com/fintech/expensetracker/repository/TransactionRepository.class
+com/fintech/expensetracker/repository/AccountRepository.class
 com/fintech/expensetracker/ExpenseTrackerApplication.class
+com/fintech/expensetracker/repository/UserRepository.class
 com/fintech/expensetracker/entity/User.class
 com/fintech/expensetracker/entity/Category.class
 com/fintech/expensetracker/entity/AccountType.class

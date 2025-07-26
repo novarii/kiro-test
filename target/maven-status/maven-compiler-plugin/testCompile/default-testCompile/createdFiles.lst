@@ -1,1 +1,2 @@
 com/fintech/expensetracker/ExpenseTrackerApplicationTests.class
+com/fintech/expensetracker/security/JwtTokenProviderTest.class

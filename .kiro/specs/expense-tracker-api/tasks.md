@@ -27,7 +27,7 @@
   - Configure SecurityConfig with JWT authentication
   - _Requirements: 1.3, 1.4, 1.5, 1.6_
 
-- [ ] 5. Create request and response DTOs with validation
+- [x] 5. Create request and response DTOs with validation
   - Implement authentication DTOs (UserRegistrationRequest, LoginRequest, AuthResponse)
   - Create account DTOs (CreateAccountRequest, UpdateAccountRequest, AccountResponse)
   - Implement transaction DTOs with proper validation annotations

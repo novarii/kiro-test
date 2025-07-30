@@ -17,10 +17,13 @@ com/fintech/expensetracker/dto/response/SpendingByCategoryResponse.class
 com/fintech/expensetracker/dto/request/UserRegistrationRequest.class
 com/fintech/expensetracker/security/UserPrincipal.class
 com/fintech/expensetracker/dto/request/LoginRequest.class
+com/fintech/expensetracker/controller/AuthController.class
 com/fintech/expensetracker/service/TransactionService.class
 com/fintech/expensetracker/repository/TransactionRepository.class
 com/fintech/expensetracker/repository/AccountRepository.class
+com/fintech/expensetracker/exception/GlobalExceptionHandler.class
 com/fintech/expensetracker/dto/response/AuthResponse.class
+com/fintech/expensetracker/exception/GlobalExceptionHandler$ErrorResponse.class
 com/fintech/expensetracker/service/AccountService.class
 com/fintech/expensetracker/dto/response/MonthlySpendingSummaryResponse.class
 com/fintech/expensetracker/security/CustomUserDetailsService.class

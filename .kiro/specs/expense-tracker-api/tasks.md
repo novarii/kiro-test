@@ -41,7 +41,7 @@
   - Write comprehensive unit tests for UserService
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 5.2_
 
-- [ ] 7. Implement AccountService with business logic
+- [x] 7. Implement AccountService with business logic
   - Create account creation with user ownership validation
   - Implement account listing with user isolation
   - Add account update functionality with ownership checks

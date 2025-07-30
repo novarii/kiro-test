@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.service.UserServiceTest" time="1.579" tests="18" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.033" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,66 +59,16 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="getUserByEmail_NonExistingUser_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="1.436">
-    <system-out><![CDATA[15:02:54.828 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with email: test@example.com
-]]></system-out>
-    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
-  </testcase>
-  <testcase name="getUserWithAccounts_NonExistingUser_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.007">
-    <system-out><![CDATA[15:02:54.869 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="validateAndGetUser_NonExistingUser_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.008">
-    <system-out><![CDATA[15:02:54.879 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="registerUser_ValidRequest_ReturnsAuthResponse" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.021">
-    <system-out><![CDATA[15:02:54.893 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to register user with email: test@example.com
-15:02:54.894 [main] INFO com.fintech.expensetracker.service.UserService -- User registered successfully with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="getUserResponseById_ExistingUser_ReturnsUserResponse" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.008"/>
-  <testcase name="getUserByEmail_ExistingUser_ReturnsUser" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005"/>
-  <testcase name="authenticateUser_UserNotFoundAfterAuthentication_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005">
-    <system-out><![CDATA[15:02:54.921 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to authenticate user with email: test@example.com
-15:02:54.922 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with email: test@example.com
-]]></system-out>
-  </testcase>
-  <testcase name="authenticateUser_InvalidCredentials_ThrowsBadCredentialsException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.008">
-    <system-out><![CDATA[15:02:54.931 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to authenticate user with email: test@example.com
-15:02:54.931 [main] WARN com.fintech.expensetracker.service.UserService -- Authentication failed for email: test@example.com
-]]></system-out>
-  </testcase>
-  <testcase name="existsByEmail_NonExistingEmail_ReturnsFalse" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005"/>
-  <testcase name="existsByEmail_ExistingEmail_ReturnsTrue" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005"/>
-  <testcase name="getUserResponseById_NonExistingUser_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.004">
-    <system-out><![CDATA[15:02:54.949 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="validateAndGetUser_ExistingUser_ReturnsUser" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.003"/>
-  <testcase name="getUserById_NonExistingUser_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005">
-    <system-out><![CDATA[15:02:54.959 [main] WARN com.fintech.expensetracker.service.UserService -- User not found with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="registerUser_EmailAlreadyExists_ThrowsBadRequestException" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.004">
-    <system-out><![CDATA[15:02:54.963 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to register user with email: test@example.com
-15:02:54.964 [main] WARN com.fintech.expensetracker.service.UserService -- Registration failed - email already exists: test@example.com
-]]></system-out>
-  </testcase>
-  <testcase name="getUserWithAccounts_ExistingUser_ReturnsUserWithAccounts" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.003"/>
-  <testcase name="getUserById_ExistingUser_ReturnsUser" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.002"/>
-  <testcase name="registerUser_SavedUserHasCorrectProperties" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.007">
-    <system-out><![CDATA[15:02:54.978 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to register user with email: test@example.com
-15:02:54.978 [main] INFO com.fintech.expensetracker.service.UserService -- User registered successfully with ID: 1
-]]></system-out>
-  </testcase>
-  <testcase name="authenticateUser_ValidCredentials_ReturnsAuthResponse" classname="com.fintech.expensetracker.service.UserServiceTest" time="0.005">
-    <system-out><![CDATA[15:02:54.983 [main] INFO com.fintech.expensetracker.service.UserService -- Attempting to authenticate user with email: test@example.com
-15:02:54.984 [main] INFO com.fintech.expensetracker.service.UserService -- User authenticated successfully: test@example.com
-]]></system-out>
-  </testcase>
+  <testcase name="getMonthlySpendingSummary_WithIncomeAndExpenses_ReturnsCorrectSummary" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.003"/>
+  <testcase name="calculateSavingsRate_WithZeroIncome_ReturnsZero" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
+  <testcase name="getSpendingByCategory_WithNoExpenses_ReturnsEmptyBreakdown" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.005"/>
+  <testcase name="getTrendAnalysis_WithNullValues_HandlesGracefully" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.003"/>
+  <testcase name="getMonthlySpendingSummary_WithNoIncome_ReturnsZeroSavingsRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
+  <testcase name="getTrendAnalysis_WithNoData_ReturnsZeroFilledMonths" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.003"/>
+  <testcase name="calculateSavingsRate_WithPositiveIncome_ReturnsCorrectRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
+  <testcase name="getSpendingByCategory_WithMultipleCategories_ReturnsCorrectBreakdown" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
+  <testcase name="getSpendingByCategory_WithSingleCategory_CalculatesHundredPercent" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
+  <testcase name="calculateSavingsRate_WithExpensesExceedingIncome_ReturnsNegativeRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
+  <testcase name="getMonthlySpendingSummary_WithNullValues_HandlesGracefully" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
+  <testcase name="getTrendAnalysis_WithMultipleMonths_ReturnsCompleteData" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
 </testsuite>

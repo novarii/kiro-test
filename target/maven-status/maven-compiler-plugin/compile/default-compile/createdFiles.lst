@@ -11,6 +11,7 @@ com/fintech/expensetracker/exception/BadRequestException.class
 com/fintech/expensetracker/repository/UserRepository.class
 com/fintech/expensetracker/security/JwtAuthenticationFilter.class
 com/fintech/expensetracker/security/JwtTokenProvider.class
+com/fintech/expensetracker/service/AnalyticsService.class
 com/fintech/expensetracker/entity/User.class
 com/fintech/expensetracker/dto/response/SpendingByCategoryResponse.class
 com/fintech/expensetracker/dto/request/UserRegistrationRequest.class

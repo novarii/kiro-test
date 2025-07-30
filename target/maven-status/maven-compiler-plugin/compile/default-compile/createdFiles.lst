@@ -1,10 +1,13 @@
 com/fintech/expensetracker/dto/response/TransactionResponse.class
+com/fintech/expensetracker/exception/ResourceNotFoundException.class
 com/fintech/expensetracker/repository/CategoryRepository.class
 com/fintech/expensetracker/dto/response/CategoryResponse.class
 com/fintech/expensetracker/dto/request/UpdateAccountRequest.class
+com/fintech/expensetracker/service/UserService.class
 com/fintech/expensetracker/dto/request/CreateTransactionRequest.class
 com/fintech/expensetracker/config/SecurityConfig.class
 com/fintech/expensetracker/dto/response/UserResponse.class
+com/fintech/expensetracker/exception/BadRequestException.class
 com/fintech/expensetracker/repository/UserRepository.class
 com/fintech/expensetracker/security/JwtAuthenticationFilter.class
 com/fintech/expensetracker/security/JwtTokenProvider.class

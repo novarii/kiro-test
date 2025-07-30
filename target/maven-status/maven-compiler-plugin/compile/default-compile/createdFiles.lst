@@ -16,6 +16,7 @@ com/fintech/expensetracker/dto/response/SpendingByCategoryResponse.class
 com/fintech/expensetracker/dto/request/UserRegistrationRequest.class
 com/fintech/expensetracker/security/UserPrincipal.class
 com/fintech/expensetracker/dto/request/LoginRequest.class
+com/fintech/expensetracker/service/TransactionService.class
 com/fintech/expensetracker/repository/TransactionRepository.class
 com/fintech/expensetracker/repository/AccountRepository.class
 com/fintech/expensetracker/dto/response/AuthResponse.class
@@ -29,6 +30,7 @@ com/fintech/expensetracker/dto/request/UpdateTransactionRequest.class
 com/fintech/expensetracker/ExpenseTrackerApplication.class
 com/fintech/expensetracker/dto/TransactionType.class
 com/fintech/expensetracker/entity/Category.class
+com/fintech/expensetracker/dto/request/TransactionFilter.class
 com/fintech/expensetracker/entity/AccountType.class
 com/fintech/expensetracker/dto/response/SpendingByCategoryResponse$CategorySpending.class
 com/fintech/expensetracker/entity/Account.class

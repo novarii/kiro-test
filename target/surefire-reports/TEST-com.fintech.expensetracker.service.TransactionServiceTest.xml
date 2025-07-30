@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.519" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.service.TransactionServiceTest" time="0.178" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,17 +59,47 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="generateTokenFromUserId_ValidUserId_ReturnsToken" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.433"/>
-  <testcase name="getExpirationInSeconds_ReturnsCorrectValue" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.002"/>
-  <testcase name="getUserIdFromToken_ValidToken_ReturnsUserId" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.038"/>
-  <testcase name="validateToken_EmptyToken_ReturnsFalse" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.007">
-    <system-out><![CDATA[14:56:03.155 [main] ERROR com.fintech.expensetracker.security.JwtTokenProvider -- JWT claims string is empty
+  <testcase name="getAccountTransactions_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.088"/>
+  <testcase name="getUserTransactions_WithAccountFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.014"/>
+  <testcase name="createTransaction_ValidIncomeRequest_ReturnsTransactionResponse" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003">
+    <system-out><![CDATA[14:56:05.297 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 2 for user 1
 ]]></system-out>
   </testcase>
-  <testcase name="generateToken_ValidAuthentication_ReturnsToken" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.004"/>
-  <testcase name="validateToken_InvalidToken_ReturnsFalse" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.003">
-    <system-out><![CDATA[14:56:03.166 [main] ERROR com.fintech.expensetracker.security.JwtTokenProvider -- Invalid JWT token
+  <testcase name="updateTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="updateTransaction_UpdateAccount_ValidatesAccountOwnership" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.008">
+    <system-out><![CDATA[14:56:05.302 [main] INFO com.fintech.expensetracker.service.TransactionService -- Transaction update audit - User: 1, Transaction ID: 1, Original: [amount=-50.0, description='Grocery shopping', date=2025-07-30, account=1, category=1], Update request: UpdateTransactionRequest{amount=null, description='null', transactionDate=null, accountId=2, categoryId=null, type=null}
+14:56:05.308 [main] INFO com.fintech.expensetracker.service.TransactionService -- Updated transaction with ID 1 for user 1
 ]]></system-out>
   </testcase>
-  <testcase name="validateToken_ValidToken_ReturnsTrue" classname="com.fintech.expensetracker.security.JwtTokenProviderTest" time="0.006"/>
+  <testcase name="createTransaction_WithoutCategory_UsesDefaultCategory" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003">
+    <system-out><![CDATA[14:56:05.311 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+]]></system-out>
+  </testcase>
+  <testcase name="getTransactionById_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="getUserTransactions_NoFilter_ReturnsAllUserTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.001"/>
+  <testcase name="updateTransaction_ValidRequest_ReturnsUpdatedTransaction" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.004">
+    <system-out><![CDATA[14:56:05.322 [main] INFO com.fintech.expensetracker.service.TransactionService -- Transaction update audit - User: 1, Transaction ID: 1, Original: [amount=-50.0, description='Grocery shopping', date=2025-07-30, account=1, category=1], Update request: UpdateTransactionRequest{amount=75.0, description='Updated grocery shopping', transactionDate=null, accountId=null, categoryId=null, type=EXPENSE}
+14:56:05.322 [main] INFO com.fintech.expensetracker.service.TransactionService -- Updated transaction with ID 1 for user 1
+]]></system-out>
+  </testcase>
+  <testcase name="getUserTransactions_WithDateRangeFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003"/>
+  <testcase name="getUserTransactions_WithCategoryFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="createTransaction_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="getTransactionById_ValidId_ReturnsTransaction" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="getAccountTransactions_ValidAccount_ReturnsTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.006"/>
+  <testcase name="createTransaction_CategoryNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="createTransaction_ValidExpenseRequest_ReturnsTransactionResponse" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002">
+    <system-out><![CDATA[14:56:05.345 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+]]></system-out>
+  </testcase>
+  <testcase name="createTransaction_NoDefaultCategoryExists_CreatesDefaultCategory" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002">
+    <system-out><![CDATA[14:56:05.349 [main] INFO com.fintech.expensetracker.service.TransactionService -- Creating default category: Uncategorized
+14:56:05.349 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+]]></system-out>
+  </testcase>
+  <testcase name="softDeleteTransaction_ValidId_MarksTransactionAsDeleted" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.005">
+    <system-out><![CDATA[14:56:05.352 [main] INFO com.fintech.expensetracker.service.TransactionService -- Soft deleted transaction with ID 1 for user 1
+]]></system-out>
+  </testcase>
+  <testcase name="softDeleteTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003"/>
 </testsuite>

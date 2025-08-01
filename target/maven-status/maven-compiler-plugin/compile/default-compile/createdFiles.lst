@@ -13,10 +13,12 @@ com/fintech/expensetracker/security/JwtAuthenticationFilter.class
 com/fintech/expensetracker/security/JwtTokenProvider.class
 com/fintech/expensetracker/service/AnalyticsService.class
 com/fintech/expensetracker/entity/User.class
+com/fintech/expensetracker/controller/AccountController.class
 com/fintech/expensetracker/dto/response/SpendingByCategoryResponse.class
 com/fintech/expensetracker/dto/request/UserRegistrationRequest.class
 com/fintech/expensetracker/security/UserPrincipal.class
 com/fintech/expensetracker/dto/request/LoginRequest.class
+com/fintech/expensetracker/controller/AccountController$TotalBalanceResponse.class
 com/fintech/expensetracker/controller/AuthController.class
 com/fintech/expensetracker/service/TransactionService.class
 com/fintech/expensetracker/repository/TransactionRepository.class
@@ -32,6 +34,7 @@ com/fintech/expensetracker/dto/response/AccountResponse.class
 com/fintech/expensetracker/entity/Transaction.class
 com/fintech/expensetracker/dto/request/UpdateTransactionRequest.class
 com/fintech/expensetracker/ExpenseTrackerApplication.class
+com/fintech/expensetracker/controller/AccountController$BalanceResponse.class
 com/fintech/expensetracker/dto/TransactionType.class
 com/fintech/expensetracker/entity/Category.class
 com/fintech/expensetracker/dto/request/TransactionFilter.class

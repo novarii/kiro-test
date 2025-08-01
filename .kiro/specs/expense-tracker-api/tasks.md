@@ -75,7 +75,7 @@
   - Write controller tests with MockMvc
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 6.1, 6.2, 6.3_
 
-- [ ] 11. Implement account management controllers
+- [x] 11. Implement account management controllers
   - Create AccountController with CRUD endpoints
   - Add proper authentication and authorization checks
   - Implement balance calculation endpoint

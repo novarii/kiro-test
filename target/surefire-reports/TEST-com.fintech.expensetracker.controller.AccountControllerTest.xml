@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.controller.AuthControllerTest" time="0.082" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.controller.AccountControllerTest" time="1.431" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -60,30 +60,76 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="authenticateUser_InvalidCredentials_ThrowsBadCredentialsException" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.057">
-    <system-out><![CDATA[15:26:47.357 [main] INFO com.fintech.expensetracker.controller.AuthController -- Login request received for email: test@example.com
+  <testcase name="getTotalBalance_UserNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="1.264">
+    <system-out><![CDATA[15:26:47.117 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating total balance for user ID: 1
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="updateAccount_ValidRequest_ReturnsUpdatedAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.038">
+    <system-out><![CDATA[15:26:47.171 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 1 for user ID: 1
+15:26:47.172 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully updated account ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="registerUser_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.003">
-    <system-out><![CDATA[15:26:47.361 [main] INFO com.fintech.expensetracker.controller.AuthController -- Registration request received for email: test@example.com
+  <testcase name="getAccountById_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.005">
+    <system-out><![CDATA[15:26:47.204 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving account ID: 999 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="registerUser_ValidRequest_ReturnsCreatedWithAuthResponse" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.004">
-    <system-out><![CDATA[15:26:47.365 [main] INFO com.fintech.expensetracker.controller.AuthController -- Registration request received for email: test@example.com
-15:26:47.365 [main] INFO com.fintech.expensetracker.controller.AuthController -- User registered successfully: test@example.com
+  <testcase name="getAccountBalance_ValidAccountId_ReturnsBalance" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.007">
+    <system-out><![CDATA[15:26:47.211 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating balance for account ID: 1 for user ID: 1
+15:26:47.212 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculated balance for account ID: 1 is: 1250.50
 ]]></system-out>
   </testcase>
-  <testcase name="authenticateUser_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.004">
-    <system-out><![CDATA[15:26:47.370 [main] INFO com.fintech.expensetracker.controller.AuthController -- Login request received for email: test@example.com
+  <testcase name="deleteAccount_ValidAccountId_ReturnsNoContent" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.005">
+    <system-out><![CDATA[15:26:47.221 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 1 for user ID: 1
+15:26:47.221 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully deleted account ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="registerUser_EmailAlreadyExists_ThrowsBadRequestException" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.003">
-    <system-out><![CDATA[15:26:47.374 [main] INFO com.fintech.expensetracker.controller.AuthController -- Registration request received for email: test@example.com
+  <testcase name="getUserAccounts_AuthenticatedUser_ReturnsAccountList" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
+    <system-out><![CDATA[15:26:47.227 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving accounts for user ID: 1
+15:26:47.227 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieved 2 accounts for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="authenticateUser_ValidCredentials_ReturnsOkWithAuthResponse" classname="com.fintech.expensetracker.controller.AuthControllerTest" time="0.003">
-    <system-out><![CDATA[15:26:47.379 [main] INFO com.fintech.expensetracker.controller.AuthController -- Login request received for email: test@example.com
-15:26:47.379 [main] INFO com.fintech.expensetracker.controller.AuthController -- User authenticated successfully: test@example.com
+  <testcase name="deleteAccount_AccountHasTransactions_ThrowsBadRequestException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.007">
+    <system-out><![CDATA[15:26:47.235 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 1 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="updateAccount_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.005">
+    <system-out><![CDATA[15:26:47.240 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 1 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="getAccountBalance_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.008">
+    <system-out><![CDATA[15:26:47.247 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating balance for account ID: 999 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="createAccount_ValidRequest_ReturnsCreatedAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
+    <system-out><![CDATA[15:26:47.254 [main] INFO com.fintech.expensetracker.controller.AccountController -- Creating account for user ID: 1 with name: New Account
+15:26:47.255 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully created account ID: 3 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="updateAccount_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.005">
+    <system-out><![CDATA[15:26:47.259 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 999 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="deleteAccount_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.006">
+    <system-out><![CDATA[15:26:47.264 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 999 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="getTotalBalance_AuthenticatedUser_ReturnsTotalBalance" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
+    <system-out><![CDATA[15:26:47.272 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating total balance for user ID: 1
+15:26:47.273 [main] INFO com.fintech.expensetracker.controller.AccountController -- Total balance for user ID: 1 is: 6376.25
+]]></system-out>
+  </testcase>
+  <testcase name="createAccount_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
+    <system-out><![CDATA[15:26:47.278 [main] INFO com.fintech.expensetracker.controller.AccountController -- Creating account for user ID: 1 with name: New Account
+]]></system-out>
+  </testcase>
+  <testcase name="getAccountById_ValidAccountId_ReturnsAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.005">
+    <system-out><![CDATA[15:26:47.284 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving account ID: 1 for user ID: 1
+15:26:47.285 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieved account ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
 </testsuite>

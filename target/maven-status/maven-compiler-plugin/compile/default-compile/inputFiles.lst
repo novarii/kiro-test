@@ -3,6 +3,7 @@
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/security/CustomUserDetailsService.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/entity/Category.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/response/SpendingByCategoryResponse.java
+/Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/controller/AccountController.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/security/UserPrincipal.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/service/AccountService.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/UserRegistrationRequest.java

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.controller.AccountControllerTest" time="0.118" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.controller.TransactionControllerTest" time="1.395" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,71 +59,105 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="getTotalBalance_UserNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.057">
-    <system-out><![CDATA[12:10:49.868 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating total balance for user ID: 1
+  <testcase name="getAccountTransactions_ValidAccountId_ReturnsPagedTransactions" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="1.259">
+    <system-out><![CDATA[12:10:49.637 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for account ID: 1 and user ID: 1 - page: 0, size: 20
+12:10:49.645 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 2 transactions for account ID: 1 and user ID: 1 (page 1/1)
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="getAccountTransactions_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.01">
+    <system-out><![CDATA[12:10:49.686 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for account ID: 999 and user ID: 1 - page: 0, size: 20
 ]]></system-out>
   </testcase>
-  <testcase name="updateAccount_ValidRequest_ReturnsUpdatedAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.874 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 1 for user ID: 1
-12:10:49.874 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully updated account ID: 1 for user ID: 1
+  <testcase name="getUserTransactions_DefaultPagination_UsesCorrectDefaults" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.007">
+    <system-out><![CDATA[12:10:49.694 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+12:10:49.695 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 1 transactions for user ID: 1 (page 1/1)
 ]]></system-out>
   </testcase>
-  <testcase name="getAccountById_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.878 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving account ID: 999 for user ID: 1
+  <testcase name="updateTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.006">
+    <system-out><![CDATA[12:10:49.702 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Updating transaction ID: 999 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="getAccountBalance_ValidAccountId_ReturnsBalance" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.882 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating balance for account ID: 1 for user ID: 1
-12:10:49.883 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculated balance for account ID: 1 is: 1250.50
+  <testcase name="getUserTransactions_NoFilters_ReturnsPagedTransactions" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.004">
+    <system-out><![CDATA[12:10:49.708 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+12:10:49.708 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 2 transactions for user ID: 1 (page 1/1)
 ]]></system-out>
   </testcase>
-  <testcase name="deleteAccount_ValidAccountId_ReturnsNoContent" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.888 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 1 for user ID: 1
-12:10:49.888 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully deleted account ID: 1 for user ID: 1
+  <testcase name="getUserTransactions_WithFilters_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.01">
+    <system-out><![CDATA[12:10:49.715 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 10
+12:10:49.720 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 1 transactions for user ID: 1 (page 1/1)
 ]]></system-out>
   </testcase>
-  <testcase name="getUserAccounts_AuthenticatedUser_ReturnsAccountList" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.893 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving accounts for user ID: 1
-12:10:49.894 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieved 2 accounts for user ID: 1
+  <testcase name="getTransactionById_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.004">
+    <system-out><![CDATA[12:10:49.725 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transaction ID: 999 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="deleteAccount_AccountHasTransactions_ThrowsBadRequestException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
-    <system-out><![CDATA[12:10:49.897 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 1 for user ID: 1
+  <testcase name="getUserTransactions_InvalidDateFormat_IgnoresInvalidDates" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.007">
+    <system-out><![CDATA[12:10:49.731 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+12:10:49.731 [main] WARN com.fintech.expensetracker.controller.TransactionController -- Invalid start date format: invalid-date
+12:10:49.731 [main] WARN com.fintech.expensetracker.controller.TransactionController -- Invalid end date format: also-invalid
+12:10:49.732 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 2 transactions for user ID: 1 (page 1/1)
 ]]></system-out>
   </testcase>
-  <testcase name="updateAccount_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.902 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 1 for user ID: 1
+  <testcase name="updateTransaction_ValidRequest_ReturnsUpdatedTransaction" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.005">
+    <system-out><![CDATA[12:10:49.738 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Updating transaction ID: 1 for user ID: 1
+12:10:49.738 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Successfully updated transaction ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="getAccountBalance_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
-    <system-out><![CDATA[12:10:49.906 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating balance for account ID: 999 for user ID: 1
+  <testcase name="getUserTransactions_InvalidAmountFormat_IgnoresInvalidAmounts" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.005">
+    <system-out><![CDATA[12:10:49.744 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+12:10:49.745 [main] WARN com.fintech.expensetracker.controller.TransactionController -- Invalid min amount format: invalid-amount
+12:10:49.745 [main] WARN com.fintech.expensetracker.controller.TransactionController -- Invalid max amount format: also-invalid
+12:10:49.745 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 2 transactions for user ID: 1 (page 1/1)
 ]]></system-out>
   </testcase>
-  <testcase name="createAccount_ValidRequest_ReturnsCreatedAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
-    <system-out><![CDATA[12:10:49.910 [main] INFO com.fintech.expensetracker.controller.AccountController -- Creating account for user ID: 1 with name: New Account
-12:10:49.910 [main] INFO com.fintech.expensetracker.controller.AccountController -- Successfully created account ID: 3 for user ID: 1
+  <testcase name="createTransaction_ValidRequest_ReturnsCreatedTransaction" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.006">
+    <system-out><![CDATA[12:10:49.750 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Creating transaction for user ID: 1 with amount: 100.00 and description: 'Test transaction'
+12:10:49.752 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Successfully created transaction ID: 3 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="updateAccount_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
-    <system-out><![CDATA[12:10:49.913 [main] INFO com.fintech.expensetracker.controller.AccountController -- Updating account ID: 999 for user ID: 1
+  <testcase name="deleteTransaction_ValidTransactionId_ReturnsNoContent" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.006">
+    <system-out><![CDATA[12:10:49.758 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Deleting transaction ID: 1 for user ID: 1
+12:10:49.759 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Successfully deleted transaction ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="deleteAccount_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.917 [main] INFO com.fintech.expensetracker.controller.AccountController -- Deleting account ID: 999 for user ID: 1
+  <testcase name="createTransaction_InvalidAccount_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.004">
+    <system-out><![CDATA[12:10:49.764 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Creating transaction for user ID: 1 with amount: 100.00 and description: 'Test transaction'
 ]]></system-out>
   </testcase>
-  <testcase name="getTotalBalance_AuthenticatedUser_ReturnsTotalBalance" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.004">
-    <system-out><![CDATA[12:10:49.921 [main] INFO com.fintech.expensetracker.controller.AccountController -- Calculating total balance for user ID: 1
-12:10:49.922 [main] INFO com.fintech.expensetracker.controller.AccountController -- Total balance for user ID: 1 is: 6376.25
+  <testcase name="updateTransaction_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.005">
+    <system-out><![CDATA[12:10:49.770 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Updating transaction ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="createAccount_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.003">
-    <system-out><![CDATA[12:10:49.926 [main] INFO com.fintech.expensetracker.controller.AccountController -- Creating account for user ID: 1 with name: New Account
+  <testcase name="getTransactionById_ValidTransactionId_ReturnsTransaction" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.003">
+    <system-out><![CDATA[12:10:49.774 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transaction ID: 1 for user ID: 1
+12:10:49.774 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved transaction ID: 1 for user ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="getAccountById_ValidAccountId_ReturnsAccount" classname="com.fintech.expensetracker.controller.AccountControllerTest" time="0.002">
-    <system-out><![CDATA[12:10:49.929 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieving account ID: 1 for user ID: 1
-12:10:49.930 [main] INFO com.fintech.expensetracker.controller.AccountController -- Retrieved account ID: 1 for user ID: 1
+  <testcase name="getUserTransactions_EmptyResult_ReturnsEmptyPage" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.003">
+    <system-out><![CDATA[12:10:49.778 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+12:10:49.779 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 0 transactions for user ID: 1 (page 1/1)
+]]></system-out>
+  </testcase>
+  <testcase name="deleteTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.003">
+    <system-out><![CDATA[12:10:49.782 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Deleting transaction ID: 999 for user ID: 1
+]]></system-out>
+  </testcase>
+  <testcase name="createTransaction_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.005">
+    <system-out><![CDATA[12:10:49.788 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Creating transaction for user ID: 1 with amount: 100.00 and description: 'Test transaction'
+]]></system-out>
+  </testcase>
+  <testcase name="getAccountTransactions_CustomPagination_ReturnsCorrectPage" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.002">
+    <system-out><![CDATA[12:10:49.792 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieving transactions for account ID: 1 and user ID: 1 - page: 1, size: 5
+12:10:49.792 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Retrieved 1 transactions for account ID: 1 and user ID: 1 (page 2/1)
+]]></system-out>
+  </testcase>
+  <testcase name="createTransaction_InvalidAmount_ThrowsBadRequestException" classname="com.fintech.expensetracker.controller.TransactionControllerTest" time="0.004">
+    <system-out><![CDATA[12:10:49.796 [main] INFO com.fintech.expensetracker.controller.TransactionController -- Creating transaction for user ID: 1 with amount: 100.00 and description: 'Test transaction'
 ]]></system-out>
   </testcase>
 </testsuite>

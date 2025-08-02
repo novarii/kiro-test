@@ -83,7 +83,7 @@
   - Write controller tests with security context
   - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.6, 5.3, 6.1, 6.2_
 
-- [ ] 12. Create transaction management controllers
+- [x] 12. Create transaction management controllers
   - Implement TransactionController with full CRUD operations
   - Add filtering capabilities for transaction listing
   - Include proper validation and error responses

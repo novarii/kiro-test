@@ -4,5 +4,6 @@ com/fintech/expensetracker/security/JwtTokenProviderTest.class
 com/fintech/expensetracker/service/AccountServiceTest.class
 com/fintech/expensetracker/service/TransactionServiceTest.class
 com/fintech/expensetracker/service/AnalyticsServiceTest.class
+com/fintech/expensetracker/controller/TransactionControllerTest.class
 com/fintech/expensetracker/service/UserServiceTest.class
 com/fintech/expensetracker/ExpenseTrackerApplicationTests.class

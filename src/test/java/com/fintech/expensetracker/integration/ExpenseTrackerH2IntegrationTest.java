@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -26,7 +27,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ExpenseTrackerH2IntegrationTest {
 
     @Autowired
@@ -35,36 +35,37 @@ class ExpenseTrackerH2IntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    private static String userToken;
-    private static String secondUserToken;
-    private static Long userId;
-    private static Long secondUserId;
-    private static Long accountId;
-    private static Long secondAccountId;
-    private static Long transactionId;
+    private String userToken;
+    private String secondUserToken;
+    private Long userId;
+    private Long secondUserId;
+    private Long accountId;
+    private Long secondAccountId;
+    private Long transactionId;
 
     @Test
-    @Order(1)
-    void shouldCompleteUserRegistrationFlow() throws Exception {
+    void shouldCompleteFullIntegrationWorkflow() throws Exception {
+        // === USER REGISTRATION AND AUTHENTICATION FLOW ===
+        
         // Test user registration
-        UserRegistrationRequest request = new UserRegistrationRequest();
-        request.setEmail("integration@example.com");
-        request.setPassword("password123");
-        request.setName("Integration Test User");
+        UserRegistrationRequest registrationRequest = new UserRegistrationRequest();
+        registrationRequest.setEmail("integration@example.com");
+        registrationRequest.setPassword("password123");
+        registrationRequest.setName("Integration Test User");
 
         MvcResult result = mockMvc.perform(post("/api/v1/auth/register")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
+                        .content(objectMapper.writeValueAsString(registrationRequest)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.token").exists())
                 .andExpect(jsonPath("$.user.email").value("integration@example.com"))
                 .andExpect(jsonPath("$.user.name").value("Integration Test User"))
                 .andReturn();
 
-        AuthResponse response = objectMapper.readValue(
+        AuthResponse authResponse = objectMapper.readValue(
                 result.getResponse().getContentAsString(), AuthResponse.class);
-        userToken = response.getToken();
-        userId = response.getUser().getId();
+        userToken = authResponse.getToken();
+        userId = authResponse.getUser().getId();
 
         assertThat(userToken).isNotNull();
         assertThat(userId).isNotNull();
@@ -72,66 +73,55 @@ class ExpenseTrackerH2IntegrationTest {
         // Test duplicate email registration
         mockMvc.perform(post("/api/v1/auth/register")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
+                        .content(objectMapper.writeValueAsString(registrationRequest)))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.message").value("Email address is already in use"));
-    }
 
-    @Test
-    @Order(2)
-    void shouldCompleteAuthenticationFlow() throws Exception {
         // Test successful login
-        LoginRequest request = new LoginRequest();
-        request.setEmail("integration@example.com");
-        request.setPassword("password123");
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail("integration@example.com");
+        loginRequest.setPassword("password123");
 
-        MvcResult result = mockMvc.perform(post("/api/v1/auth/login")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.token").exists())
-                .andExpect(jsonPath("$.user.email").value("integration@example.com"))
-                .andReturn();
-
-        AuthResponse response = objectMapper.readValue(
-                result.getResponse().getContentAsString(), AuthResponse.class);
-        assertThat(response.getToken()).isNotNull();
-
-        // Test invalid credentials
-        request.setPassword("wrongpassword");
         mockMvc.perform(post("/api/v1/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
+                        .content(objectMapper.writeValueAsString(loginRequest)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.token").exists())
+                .andExpect(jsonPath("$.user.email").value("integration@example.com"));
+
+        // Test invalid credentials
+        loginRequest.setPassword("wrongpassword");
+        mockMvc.perform(post("/api/v1/auth/login")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(loginRequest)))
                 .andExpect(status().isUnauthorized())
                 .andExpect(jsonPath("$.message").value("Invalid credentials provided"));
 
         // Test authentication requirement
         mockMvc.perform(get("/api/v1/accounts"))
                 .andExpect(status().isForbidden());
-    }
 
-    @Test
-    @Order(3)
-    void shouldCompleteAccountManagementFlow() throws Exception {
+        // === ACCOUNT MANAGEMENT FLOW ===
+        
         // Create account
-        CreateAccountRequest request = new CreateAccountRequest();
-        request.setName("Integration Test Account");
-        request.setType(AccountType.CHECKING);
-        request.setInitialBalance(new BigDecimal("1500.00"));
+        CreateAccountRequest accountRequest = new CreateAccountRequest();
+        accountRequest.setName("Integration Test Account");
+        accountRequest.setType(AccountType.CHECKING);
+        accountRequest.setInitialBalance(new BigDecimal("1500.00"));
 
-        MvcResult result = mockMvc.perform(post("/api/v1/accounts")
+        result = mockMvc.perform(post("/api/v1/accounts")
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
+                        .content(objectMapper.writeValueAsString(accountRequest)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.name").value("Integration Test Account"))
                 .andExpect(jsonPath("$.type").value("CHECKING"))
                 .andExpect(jsonPath("$.currentBalance").value(1500.00))
                 .andReturn();
 
-        AccountResponse response = objectMapper.readValue(
+        AccountResponse accountResponse = objectMapper.readValue(
                 result.getResponse().getContentAsString(), AccountResponse.class);
-        accountId = response.getId();
+        accountId = accountResponse.getId();
 
         // List accounts
         mockMvc.perform(get("/api/v1/accounts")
@@ -142,13 +132,13 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(jsonPath("$[0].name").value("Integration Test Account"));
 
         // Update account
-        UpdateAccountRequest updateRequest = new UpdateAccountRequest();
-        updateRequest.setName("Updated Integration Account");
+        UpdateAccountRequest updateAccountRequest = new UpdateAccountRequest();
+        updateAccountRequest.setName("Updated Integration Account");
 
         mockMvc.perform(put("/api/v1/accounts/" + accountId)
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(updateRequest)))
+                        .content(objectMapper.writeValueAsString(updateAccountRequest)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").value("Updated Integration Account"));
 
@@ -157,11 +147,9 @@ class ExpenseTrackerH2IntegrationTest {
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.balance").value(1500.00));
-    }
 
-    @Test
-    @Order(4)
-    void shouldCompleteTransactionManagementFlow() throws Exception {
+        // === TRANSACTION MANAGEMENT FLOW ===
+        
         // Create income transaction
         CreateTransactionRequest incomeRequest = new CreateTransactionRequest();
         incomeRequest.setAmount(new BigDecimal("3000.00"));
@@ -170,7 +158,7 @@ class ExpenseTrackerH2IntegrationTest {
         incomeRequest.setAccountId(accountId);
         incomeRequest.setType(TransactionType.INCOME);
 
-        MvcResult result = mockMvc.perform(post("/api/v1/transactions")
+        result = mockMvc.perform(post("/api/v1/transactions")
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(incomeRequest)))
@@ -180,9 +168,9 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(jsonPath("$.type").value("INCOME"))
                 .andReturn();
 
-        TransactionResponse response = objectMapper.readValue(
+        TransactionResponse transactionResponse = objectMapper.readValue(
                 result.getResponse().getContentAsString(), TransactionResponse.class);
-        transactionId = response.getId();
+        transactionId = transactionResponse.getId();
 
         // Create expense transactions
         String[] expenses = {"Rent", "Groceries", "Utilities", "Transportation"};
@@ -225,14 +213,14 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(jsonPath("$.length()").value(4));
 
         // Update transaction
-        UpdateTransactionRequest updateRequest = new UpdateTransactionRequest();
-        updateRequest.setDescription("Updated Monthly Salary");
-        updateRequest.setAmount(new BigDecimal("3200.00"));
+        UpdateTransactionRequest updateTransactionRequest = new UpdateTransactionRequest();
+        updateTransactionRequest.setDescription("Updated Monthly Salary");
+        updateTransactionRequest.setAmount(new BigDecimal("3200.00"));
 
         mockMvc.perform(put("/api/v1/transactions/" + transactionId)
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(updateRequest)))
+                        .content(objectMapper.writeValueAsString(updateTransactionRequest)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.description").value("Updated Monthly Salary"))
                 .andExpect(jsonPath("$.amount").value(3200.00));
@@ -242,17 +230,16 @@ class ExpenseTrackerH2IntegrationTest {
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.balance").value(2650.00)); // 1500 + 3200 - 1850 (expenses)
-    }
 
-    @Test
-    @Order(5)
-    void shouldCompleteAnalyticsFlow() throws Exception {
+        // === ANALYTICS FLOW ===
+        
         YearMonth currentMonth = YearMonth.now();
 
         // Test monthly spending summary
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("month", currentMonth.toString()))
+                        .param("year", String.valueOf(currentMonth.getYear()))
+                        .param("month", String.valueOf(currentMonth.getMonthValue())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(3200.00))
                 .andExpect(jsonPath("$.totalExpenses").value(1850.00))
@@ -289,62 +276,61 @@ class ExpenseTrackerH2IntegrationTest {
         YearMonth futureMonth = YearMonth.now().plusMonths(6);
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("month", futureMonth.toString()))
+                        .param("year", String.valueOf(futureMonth.getYear()))
+                        .param("month", String.valueOf(futureMonth.getMonthValue())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(0.00))
                 .andExpect(jsonPath("$.totalExpenses").value(0.00))
                 .andExpect(jsonPath("$.netSavings").value(0.00));
-    }
 
-    @Test
-    @Order(6)
-    void shouldEnsureDataIsolationBetweenUsers() throws Exception {
+        // === DATA ISOLATION TESTING ===
+        
         // Register second user
         UserRegistrationRequest secondUserRequest = new UserRegistrationRequest();
         secondUserRequest.setEmail("second@example.com");
         secondUserRequest.setPassword("password123");
         secondUserRequest.setName("Second User");
 
-        MvcResult result = mockMvc.perform(post("/api/v1/auth/register")
+        result = mockMvc.perform(post("/api/v1/auth/register")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(secondUserRequest)))
                 .andExpect(status().isCreated())
                 .andReturn();
 
-        AuthResponse response = objectMapper.readValue(
+        AuthResponse secondAuthResponse = objectMapper.readValue(
                 result.getResponse().getContentAsString(), AuthResponse.class);
-        secondUserToken = response.getToken();
-        secondUserId = response.getUser().getId();
+        secondUserToken = secondAuthResponse.getToken();
+        secondUserId = secondAuthResponse.getUser().getId();
 
         // Create account for second user
-        CreateAccountRequest accountRequest = new CreateAccountRequest();
-        accountRequest.setName("Second User Account");
-        accountRequest.setType(AccountType.SAVINGS);
-        accountRequest.setInitialBalance(new BigDecimal("5000.00"));
+        CreateAccountRequest secondAccountRequest = new CreateAccountRequest();
+        secondAccountRequest.setName("Second User Account");
+        secondAccountRequest.setType(AccountType.SAVINGS);
+        secondAccountRequest.setInitialBalance(new BigDecimal("5000.00"));
 
         result = mockMvc.perform(post("/api/v1/accounts")
                         .header("Authorization", "Bearer " + secondUserToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(accountRequest)))
+                        .content(objectMapper.writeValueAsString(secondAccountRequest)))
                 .andExpect(status().isCreated())
                 .andReturn();
 
-        AccountResponse accountResponse = objectMapper.readValue(
+        AccountResponse secondAccountResponse = objectMapper.readValue(
                 result.getResponse().getContentAsString(), AccountResponse.class);
-        secondAccountId = accountResponse.getId();
+        secondAccountId = secondAccountResponse.getId();
 
         // Create transaction for second user
-        CreateTransactionRequest transactionRequest = new CreateTransactionRequest();
-        transactionRequest.setAmount(new BigDecimal("1000.00"));
-        transactionRequest.setDescription("Second User Income");
-        transactionRequest.setTransactionDate(LocalDate.now());
-        transactionRequest.setAccountId(secondAccountId);
-        transactionRequest.setType(TransactionType.INCOME);
+        CreateTransactionRequest secondUserTransactionRequest = new CreateTransactionRequest();
+        secondUserTransactionRequest.setAmount(new BigDecimal("1000.00"));
+        secondUserTransactionRequest.setDescription("Second User Income");
+        secondUserTransactionRequest.setTransactionDate(LocalDate.now());
+        secondUserTransactionRequest.setAccountId(secondAccountId);
+        secondUserTransactionRequest.setType(TransactionType.INCOME);
 
         mockMvc.perform(post("/api/v1/transactions")
                         .header("Authorization", "Bearer " + secondUserToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(transactionRequest)))
+                        .content(objectMapper.writeValueAsString(secondUserTransactionRequest)))
                 .andExpect(status().isCreated());
 
         // Verify data isolation - first user should only see their accounts
@@ -373,16 +359,17 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(jsonPath("$.length()").value(1)); // Second user's transaction
 
         // Verify analytics isolation
-        YearMonth currentMonth = YearMonth.now();
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("month", currentMonth.toString()))
+                        .param("year", String.valueOf(currentMonth.getYear()))
+                        .param("month", String.valueOf(currentMonth.getMonthValue())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(3200.00)); // Should not include second user's income
 
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + secondUserToken)
-                        .param("month", currentMonth.toString()))
+                        .param("year", String.valueOf(currentMonth.getYear()))
+                        .param("month", String.valueOf(currentMonth.getMonthValue())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(1000.00))
                 .andExpect(jsonPath("$.totalExpenses").value(0.00));
@@ -392,18 +379,16 @@ class ExpenseTrackerH2IntegrationTest {
                         .header("Authorization", "Bearer " + secondUserToken))
                 .andExpect(status().isNotFound());
 
-        UpdateAccountRequest updateRequest = new UpdateAccountRequest();
-        updateRequest.setName("Hacked Account");
+        UpdateAccountRequest hackAttempt = new UpdateAccountRequest();
+        hackAttempt.setName("Hacked Account");
         mockMvc.perform(put("/api/v1/accounts/" + accountId)
                         .header("Authorization", "Bearer " + secondUserToken)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(updateRequest)))
+                        .content(objectMapper.writeValueAsString(hackAttempt)))
                 .andExpect(status().isNotFound());
-    }
 
-    @Test
-    @Order(7)
-    void shouldHandleErrorScenariosCorrectly() throws Exception {
+        // === ERROR HANDLING TESTING ===
+        
         // Test validation errors
         CreateAccountRequest invalidAccount = new CreateAccountRequest();
         invalidAccount.setName(""); // Invalid empty name
@@ -449,11 +434,9 @@ class ExpenseTrackerH2IntegrationTest {
                         .content(objectMapper.writeValueAsString(precisionTest)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.amount").value(100.00)); // Should be properly rounded
-    }
 
-    @Test
-    @Order(8)
-    void shouldHandleSoftDeleteCorrectly() throws Exception {
+        // === SOFT DELETE TESTING ===
+        
         // Soft delete transaction
         mockMvc.perform(delete("/api/v1/transactions/" + transactionId)
                         .header("Authorization", "Bearer " + userToken))
@@ -466,10 +449,10 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(jsonPath("$.length()").value(5)); // Should exclude the deleted transaction
 
         // Analytics should reflect the deletion
-        YearMonth currentMonth = YearMonth.now();
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("month", currentMonth.toString()))
+                        .param("year", String.valueOf(currentMonth.getYear()))
+                        .param("month", String.valueOf(currentMonth.getMonthValue())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(0.00)); // Income transaction was deleted
     }

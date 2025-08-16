@@ -1,61 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 8.787 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteTransactionManagementFlow -- Time elapsed: 0.061 s <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.024 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
+com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow -- Time elapsed: 1.399 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<201> but was:<400>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
 	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteTransactionManagementFlow(ExpenseTrackerH2IntegrationTest.java:208)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteAnalyticsFlow -- Time elapsed: 0.042 s <<< FAILURE!
-java.lang.AssertionError: JSON path "$.totalIncome" expected:<3200.0> but was:<3000.0>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
-	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteAnalyticsFlow(ExpenseTrackerH2IntegrationTest.java:257)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldEnsureDataIsolationBetweenUsers -- Time elapsed: 0.222 s <<< FAILURE!
-java.lang.AssertionError: JSON path "$.length()" expected:<5> but was:<11>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
-	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldEnsureDataIsolationBetweenUsers(ExpenseTrackerH2IntegrationTest.java:368)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleErrorScenariosCorrectly -- Time elapsed: 0.066 s <<< FAILURE!
-java.lang.AssertionError: Status expected:<201> but was:<400>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleErrorScenariosCorrectly(ExpenseTrackerH2IntegrationTest.java:450)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleSoftDeleteCorrectly -- Time elapsed: 0.034 s <<< FAILURE!
-java.lang.AssertionError: JSON path "$.length()" expected:<5> but was:<11>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
-	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleSoftDeleteCorrectly(ExpenseTrackerH2IntegrationTest.java:466)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:196)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

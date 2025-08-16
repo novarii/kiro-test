@@ -114,7 +114,7 @@
   - Add database indexes for performance optimization
   - _Requirements: 3.5_
 
-- [-] 16. Implement comprehensive integration tests
+- [ ] 16. Implement comprehensive integration tests
   - Create integration tests using @SpringBootTest and TestContainers
   - Test complete user registration and authentication flows
   - Verify account and transaction management end-to-end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="8.142" tests="8" errors="0" skipped="0" failures="5">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="8.787" tests="8" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250816162848146_3.jar /Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire 2025-08-16T16-28-48_053-jvmRun1 surefire-20250816162848146_1tmp surefire_0-20250816162848146_2tmp"/>
+    <property name="sun.java.command" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250816164221529_3.jar /Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire 2025-08-16T16-42-21_432-jvmRun1 surefire-20250816164221529_1tmp surefire_0-20250816164221529_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ExpenseTrackerH2IntegrationTest"/>
@@ -34,7 +34,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250816162848146_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250816164221529_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.8"/>
@@ -54,7 +54,7 @@
     <property name="user.dir" value="/Users/bahadirbozoglu/Projects/Test/kiro-test"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="9452"/>
+    <property name="PID" value="10047"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/bahadirbozoglu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -67,9 +67,9 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[expense-tracker-test] "/>
   </properties>
-  <testcase name="shouldCompleteUserRegistrationFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="1.028">
-    <system-out><![CDATA[16:28:49.041 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest]: ExpenseTrackerH2IntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:28:49.179 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fintech.expensetracker.ExpenseTrackerApplication for test class com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
+  <testcase name="shouldCompleteUserRegistrationFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.959">
+    <system-out><![CDATA[16:42:22.414 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest]: ExpenseTrackerH2IntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:42:22.547 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fintech.expensetracker.ExpenseTrackerApplication for test class com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -79,40 +79,40 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.1)
 
-2025-08-16T16:28:49.625+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Starting ExpenseTrackerH2IntegrationTest using Java 21.0.8 with PID 9452 (started by bahadirbozoglu in /Users/bahadirbozoglu/Projects/Test/kiro-test)
-2025-08-16T16:28:49.626+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : The following 1 profile is active: "test"
-2025-08-16T16:28:50.345+03:00  INFO 9452 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-16T16:28:50.418+03:00  INFO 9452 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
-2025-08-16T16:28:50.942+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-16T16:28:51.010+03:00  INFO 9452 --- [expense-tracker-test] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-08-16T16:28:51.044+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-16T16:28:51.319+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-16T16:28:51.351+03:00  INFO 9452 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-16T16:28:51.644+03:00  INFO 9452 --- [expense-tracker-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-08-16T16:28:51.647+03:00  INFO 9452 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-16T16:28:51.683+03:00  WARN 9452 --- [expense-tracker-test] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-16T16:28:52.728+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-16T16:28:52.780+03:00  INFO 9452 --- [expense-tracker-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-16T16:28:53.092+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-16T16:28:54.291+03:00  WARN 9452 --- [expense-tracker-test] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-16T16:28:54.883+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-08-16T16:28:54.941+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-08-16T16:28:54.941+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-08-16T16:28:54.943+03:00  INFO 9452 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2025-08-16T16:28:54.961+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Started ExpenseTrackerH2IntegrationTest in 5.603 seconds (process running for 6.727)
-2025-08-16T16:28:54.966+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Initializing default categories...
-2025-08-16T16:28:55.073+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Default category not found, creating 'Uncategorized' category
-2025-08-16T16:28:55.133+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created default 'Uncategorized' category
-2025-08-16T16:28:55.193+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created 23 missing essential categories
-2025-08-16T16:28:55.205+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Database initialization complete. Total categories: 24
-2025-08-16T16:28:55.982+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
-2025-08-16T16:28:55.983+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
-2025-08-16T16:28:56.077+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 1
-2025-08-16T16:28:56.111+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: integration@example.com
-2025-08-16T16:28:56.228+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
-2025-08-16T16:28:56.228+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
-2025-08-16T16:28:56.230+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Registration failed - email already exists: integration@example.com
-2025-08-16T16:28:56.233+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Bad request exception: Email address is already in use
+2025-08-16T16:42:23.019+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Starting ExpenseTrackerH2IntegrationTest using Java 21.0.8 with PID 10047 (started by bahadirbozoglu in /Users/bahadirbozoglu/Projects/Test/kiro-test)
+2025-08-16T16:42:23.020+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : The following 1 profile is active: "test"
+2025-08-16T16:42:23.835+03:00  INFO 10047 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-16T16:42:23.903+03:00  INFO 10047 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2025-08-16T16:42:24.579+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-16T16:42:24.685+03:00  INFO 10047 --- [expense-tracker-test] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-08-16T16:42:24.726+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-16T16:42:25.079+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-16T16:42:25.112+03:00  INFO 10047 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-16T16:42:25.379+03:00  INFO 10047 --- [expense-tracker-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-08-16T16:42:25.381+03:00  INFO 10047 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-16T16:42:25.420+03:00  WARN 10047 --- [expense-tracker-test] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-16T16:42:26.598+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-16T16:42:26.654+03:00  INFO 10047 --- [expense-tracker-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-16T16:42:26.981+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-16T16:42:28.156+03:00  WARN 10047 --- [expense-tracker-test] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-16T16:42:28.824+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-16T16:42:28.888+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-16T16:42:28.888+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-16T16:42:28.890+03:00  INFO 10047 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-16T16:42:28.908+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Started ExpenseTrackerH2IntegrationTest in 6.195 seconds (process running for 7.279)
+2025-08-16T16:42:28.912+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Initializing default categories...
+2025-08-16T16:42:29.037+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Default category not found, creating 'Uncategorized' category
+2025-08-16T16:42:29.104+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created default 'Uncategorized' category
+2025-08-16T16:42:29.183+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created 23 missing essential categories
+2025-08-16T16:42:29.196+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Database initialization complete. Total categories: 24
+2025-08-16T16:42:29.906+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
+2025-08-16T16:42:29.907+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
+2025-08-16T16:42:30.006+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 1
+2025-08-16T16:42:30.037+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: integration@example.com
+2025-08-16T16:42:30.150+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
+2025-08-16T16:42:30.150+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
+2025-08-16T16:42:30.153+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Registration failed - email already exists: integration@example.com
+2025-08-16T16:42:30.157+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Bad request exception: Email address is already in use
 ]]></system-out>
     <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -120,37 +120,37 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="shouldCompleteAuthenticationFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.267">
-    <system-out><![CDATA[2025-08-16T16:28:56.254+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
-2025-08-16T16:28:56.254+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
-2025-08-16T16:28:56.430+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User authenticated successfully: integration@example.com
-2025-08-16T16:28:56.431+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User authenticated successfully: integration@example.com
-2025-08-16T16:28:56.434+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
-2025-08-16T16:28:56.434+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
-2025-08-16T16:28:56.508+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Authentication failed for email: integration@example.com
-2025-08-16T16:28:56.509+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Authentication failed: Invalid email or password
+  <testcase name="shouldCompleteAuthenticationFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.248">
+    <system-out><![CDATA[2025-08-16T16:42:30.177+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
+2025-08-16T16:42:30.178+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
+2025-08-16T16:42:30.340+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User authenticated successfully: integration@example.com
+2025-08-16T16:42:30.340+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User authenticated successfully: integration@example.com
+2025-08-16T16:42:30.343+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
+2025-08-16T16:42:30.343+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
+2025-08-16T16:42:30.413+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Authentication failed for email: integration@example.com
+2025-08-16T16:42:30.414+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Authentication failed: Invalid email or password
 ]]></system-out>
   </testcase>
-  <testcase name="shouldCompleteAccountManagementFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.134">
-    <system-out><![CDATA[2025-08-16T16:28:56.559+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 1 with name: Integration Test Account
-2025-08-16T16:28:56.559+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 1
-2025-08-16T16:28:56.563+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 1 for user ID: 1
-2025-08-16T16:28:56.578+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 1 for user ID: 1
-2025-08-16T16:28:56.587+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
-2025-08-16T16:28:56.588+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
-2025-08-16T16:28:56.597+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
-2025-08-16T16:28:56.602+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
-2025-08-16T16:28:56.621+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Updating account ID: 1 for user ID: 1
-2025-08-16T16:28:56.622+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Updating account ID: 1 for user ID: 1
-2025-08-16T16:28:56.626+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully updated account ID: 1 for user ID: 1
-2025-08-16T16:28:56.637+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully updated account ID: 1 for user ID: 1
-2025-08-16T16:28:56.642+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 1 for user ID: 1
-2025-08-16T16:28:56.642+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 1 for user ID: 1
-2025-08-16T16:28:56.645+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculated balance for account ID: 1 is: 1500.00
-2025-08-16T16:28:56.645+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculated balance for account ID: 1 is: 1500.00
+  <testcase name="shouldCompleteAccountManagementFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.135">
+    <system-out><![CDATA[2025-08-16T16:42:30.460+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 1 with name: Integration Test Account
+2025-08-16T16:42:30.461+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 1
+2025-08-16T16:42:30.464+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 1 for user ID: 1
+2025-08-16T16:42:30.479+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 1 for user ID: 1
+2025-08-16T16:42:30.490+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
+2025-08-16T16:42:30.491+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
+2025-08-16T16:42:30.501+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
+2025-08-16T16:42:30.507+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
+2025-08-16T16:42:30.524+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Updating account ID: 1 for user ID: 1
+2025-08-16T16:42:30.525+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Updating account ID: 1 for user ID: 1
+2025-08-16T16:42:30.529+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully updated account ID: 1 for user ID: 1
+2025-08-16T16:42:30.541+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully updated account ID: 1 for user ID: 1
+2025-08-16T16:42:30.547+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 1 for user ID: 1
+2025-08-16T16:42:30.548+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 1 for user ID: 1
+2025-08-16T16:42:30.550+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculated balance for account ID: 1 is: 1500.00
+2025-08-16T16:42:30.551+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculated balance for account ID: 1 is: 1500.00
 ]]></system-out>
   </testcase>
-  <testcase name="shouldCompleteTransactionManagementFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.054">
+  <testcase name="shouldCompleteTransactionManagementFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.061">
     <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
@@ -161,11 +161,11 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[2025-08-16T16:28:56.664+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 3000.00 and description: 'Monthly Salary'
-2025-08-16T16:28:56.671+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 1 for user 1
-2025-08-16T16:28:56.672+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 1 for user ID: 1
-2025-08-16T16:28:56.685+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 1200.00 and description: 'Rent'
-2025-08-16T16:28:56.695+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Validation failed for classes [com.fintech.expensetracker.entity.Transaction] during persist time for groups [jakarta.validation.groups.Default, ]
+    <system-out><![CDATA[2025-08-16T16:42:30.571+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 3000.00 and description: 'Monthly Salary'
+2025-08-16T16:42:30.579+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 1 for user 1
+2025-08-16T16:42:30.581+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 1 for user ID: 1
+2025-08-16T16:42:30.596+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 1200.00 and description: 'Rent'
+2025-08-16T16:42:30.607+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Validation failed for classes [com.fintech.expensetracker.entity.Transaction] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Amount must be greater than 0', propertyPath=amount, rootBeanClass=class com.fintech.expensetracker.entity.Transaction, messageTemplate='Amount must be greater than 0'}
 ]
@@ -174,7 +174,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ", Content-Length:"128"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA", Content-Length:"128"]
              Body = {"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-16","accountId":1,"categoryId":null,"type":"INCOME"}
     Session Attrs = {}
 
@@ -202,7 +202,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:28:56.669834","updatedAt":"2025-08-16T16:28:56.669877"}
+             Body = {"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:42:30.578037","updatedAt":"2025-08-16T16:42:30.578071"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -211,7 +211,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ", Content-Length:"119"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA", Content-Length:"119"]
              Body = {"amount":1200.00,"description":"Rent","transactionDate":"2025-08-15","accountId":1,"categoryId":null,"type":"EXPENSE"}
     Session Attrs = {}
 
@@ -239,30 +239,32 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.696173","status":400,"error":"Validation Error","message":"Constraint validation failed","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0"}}
+             Body = {"timestamp":"2025-08-16T16:42:30.607966","status":400,"error":"Validation Error","message":"Constraint validation failed","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldCompleteAnalyticsFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.021">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<400>
+  <testcase name="shouldCompleteAnalyticsFlow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.042">
+    <failure message="JSON path &quot;$.totalIncome&quot; expected:&lt;3200.0&gt; but was:&lt;3000.0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: JSON path "$.totalIncome" expected:<3200.0> but was:<3000.0>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
 	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteAnalyticsFlow(ExpenseTrackerH2IntegrationTest.java:257)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[2025-08-16T16:28:56.723+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Method argument type mismatch: Failed to convert value of type 'java.lang.String' to required type 'java.time.YearMonth'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam @jakarta.validation.constraints.NotNull @org.springframework.format.annotation.DateTimeFormat java.time.YearMonth] for value [8]
+    <system-out><![CDATA[2025-08-16T16:42:30.644+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AnalyticsController     : Retrieving monthly spending summary for user ID: 1 and month: 2025-08
+2025-08-16T16:42:30.655+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AnalyticsController     : Retrieved monthly spending summary for user ID: 1 and month: 2025-08 - Income: 3000.00, Expenses: 0, Savings: 3000.00
 
 MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/analytics/monthly-summary
-       Parameters = {year=[2025], month=[8]}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+       Parameters = {month=[2025-08]}
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -275,7 +277,7 @@ Async:
      Async result = null
 
 Resolved Exception:
-             Type = org.springframework.web.method.annotation.MethodArgumentTypeMismatchException
+             Type = null
 
 ModelAndView:
         View name = null
@@ -286,49 +288,49 @@ FlashMap:
        Attributes = null
 
 MockHttpServletResponse:
-           Status = 400
+           Status = 200
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.723536","status":400,"error":"Invalid Parameter","message":"Invalid value '8' for parameter 'month'. Expected type: YearMonth","path":"/api/v1/analytics/monthly-summary","details":null}
+             Body = {"month":"2025-08","totalIncome":3000.00,"totalExpenses":0,"netSavings":3000.00,"savingsRate":100.00}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldEnsureDataIsolationBetweenUsers" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.167">
+  <testcase name="shouldEnsureDataIsolationBetweenUsers" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.222">
     <failure message="JSON path &quot;$.length()&quot; expected:&lt;5&gt; but was:&lt;11&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: JSON path "$.length()" expected:<5> but was:<11>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
 	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
 	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldEnsureDataIsolationBetweenUsers(ExpenseTrackerH2IntegrationTest.java:371)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldEnsureDataIsolationBetweenUsers(ExpenseTrackerH2IntegrationTest.java:368)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[2025-08-16T16:28:56.735+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: second@example.com
-2025-08-16T16:28:56.736+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: second@example.com
-2025-08-16T16:28:56.819+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 2
-2025-08-16T16:28:56.820+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: second@example.com
-2025-08-16T16:28:56.826+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 2 with name: Second User Account
-2025-08-16T16:28:56.826+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 2
-2025-08-16T16:28:56.828+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 2 for user ID: 2
-2025-08-16T16:28:56.830+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 2 for user ID: 2
-2025-08-16T16:28:56.835+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 2 with amount: 1000.00 and description: 'Second User Income'
-2025-08-16T16:28:56.839+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 2 for user 2
-2025-08-16T16:28:56.839+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 2 for user ID: 2
-2025-08-16T16:28:56.844+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
-2025-08-16T16:28:56.844+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
-2025-08-16T16:28:56.847+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
-2025-08-16T16:28:56.849+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
-2025-08-16T16:28:56.854+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 2
-2025-08-16T16:28:56.854+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 2
-2025-08-16T16:28:56.856+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 2
-2025-08-16T16:28:56.858+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 2
-2025-08-16T16:28:56.866+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
-2025-08-16T16:28:56.884+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieved 1 transactions for user ID: 1 (page 1/1)
+    <system-out><![CDATA[2025-08-16T16:42:30.666+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: second@example.com
+2025-08-16T16:42:30.666+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: second@example.com
+2025-08-16T16:42:30.809+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 2
+2025-08-16T16:42:30.810+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: second@example.com
+2025-08-16T16:42:30.816+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 2 with name: Second User Account
+2025-08-16T16:42:30.816+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 2
+2025-08-16T16:42:30.818+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 2 for user ID: 2
+2025-08-16T16:42:30.820+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 2 for user ID: 2
+2025-08-16T16:42:30.826+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 2 with amount: 1000.00 and description: 'Second User Income'
+2025-08-16T16:42:30.830+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 2 for user 2
+2025-08-16T16:42:30.830+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 2 for user ID: 2
+2025-08-16T16:42:30.835+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
+2025-08-16T16:42:30.835+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
+2025-08-16T16:42:30.837+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
+2025-08-16T16:42:30.840+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
+2025-08-16T16:42:30.845+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 2
+2025-08-16T16:42:30.845+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 2
+2025-08-16T16:42:30.847+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 2
+2025-08-16T16:42:30.847+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 2
+2025-08-16T16:42:30.854+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+2025-08-16T16:42:30.868+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieved 1 transactions for user ID: 1 (page 1/1)
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -362,7 +364,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.9yXb8oiIUSTF78Jb3pXrt5ZtA8GcJ-hgcQjMGLaTWhZgu9oWti59uaSH3gTguVeqUnvZLOPiPolb9vTbMkPjeQ","tokenType":"Bearer","expiresIn":86400,"user":{"id":2,"email":"second@example.com","name":"Second User","createdAt":"2025-08-16T16:28:56.817979"}}
+             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.KtYP1ULWn3A0fMrk1ayG1zJP2YF5d4U3m868i_xWk6OeI9cDQ3a7N2SLWk9TNEwfxZSif4GCWPXcwnDl07kNBg","tokenType":"Bearer","expiresIn":86400,"user":{"id":2,"email":"second@example.com","name":"Second User","createdAt":"2025-08-16T16:42:30.808713"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -371,7 +373,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.9yXb8oiIUSTF78Jb3pXrt5ZtA8GcJ-hgcQjMGLaTWhZgu9oWti59uaSH3gTguVeqUnvZLOPiPolb9vTbMkPjeQ", Content-Length:"72"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.KtYP1ULWn3A0fMrk1ayG1zJP2YF5d4U3m868i_xWk6OeI9cDQ3a7N2SLWk9TNEwfxZSif4GCWPXcwnDl07kNBg", Content-Length:"72"]
              Body = {"name":"Second User Account","type":"SAVINGS","initialBalance":5000.00}
     Session Attrs = {}
 
@@ -399,7 +401,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":5000.00,"currentBalance":5000.00,"createdAt":"2025-08-16T16:28:56.827438","updatedAt":"2025-08-16T16:28:56.827457"}
+             Body = {"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":5000.00,"currentBalance":5000.00,"createdAt":"2025-08-16T16:42:30.817775","updatedAt":"2025-08-16T16:42:30.81779"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -408,7 +410,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.9yXb8oiIUSTF78Jb3pXrt5ZtA8GcJ-hgcQjMGLaTWhZgu9oWti59uaSH3gTguVeqUnvZLOPiPolb9vTbMkPjeQ", Content-Length:"132"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.KtYP1ULWn3A0fMrk1ayG1zJP2YF5d4U3m868i_xWk6OeI9cDQ3a7N2SLWk9TNEwfxZSif4GCWPXcwnDl07kNBg", Content-Length:"132"]
              Body = {"amount":1000.00,"description":"Second User Income","transactionDate":"2025-08-16","accountId":2,"categoryId":null,"type":"INCOME"}
     Session Attrs = {}
 
@@ -436,7 +438,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":2,"amount":1000.00,"description":"Second User Income","transactionDate":"2025-08-16","account":{"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:28:56.838794","updatedAt":"2025-08-16T16:28:56.838818"}
+             Body = {"id":2,"amount":1000.00,"description":"Second User Income","transactionDate":"2025-08-16","account":{"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:42:30.829404","updatedAt":"2025-08-16T16:42:30.829421"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -445,7 +447,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -473,7 +475,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = [{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":4500.00,"createdAt":"2025-08-16T16:28:56.562229","updatedAt":"2025-08-16T16:28:56.628927"}]
+             Body = [{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":4500.00,"createdAt":"2025-08-16T16:42:30.463637","updatedAt":"2025-08-16T16:42:30.532505"}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -482,7 +484,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.9yXb8oiIUSTF78Jb3pXrt5ZtA8GcJ-hgcQjMGLaTWhZgu9oWti59uaSH3gTguVeqUnvZLOPiPolb9vTbMkPjeQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.KtYP1ULWn3A0fMrk1ayG1zJP2YF5d4U3m868i_xWk6OeI9cDQ3a7N2SLWk9TNEwfxZSif4GCWPXcwnDl07kNBg"]
              Body = null
     Session Attrs = {}
 
@@ -510,7 +512,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = [{"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":5000.00,"currentBalance":6000.00,"createdAt":"2025-08-16T16:28:56.827438","updatedAt":"2025-08-16T16:28:56.827457"}]
+             Body = [{"id":2,"name":"Second User Account","type":"SAVINGS","initialBalance":5000.00,"currentBalance":6000.00,"createdAt":"2025-08-16T16:42:30.817775","updatedAt":"2025-08-16T16:42:30.81779"}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -519,7 +521,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -547,30 +549,30 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"content":[{"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:28:56.669834","updatedAt":"2025-08-16T16:28:56.669877"}],"pageable":{"pageNumber":0,"pageSize":20,"sort":{"empty":false,"unsorted":false,"sorted":true},"offset":0,"paged":true,"unpaged":false},"last":true,"totalElements":1,"totalPages":1,"size":20,"number":0,"sort":{"empty":false,"unsorted":false,"sorted":true},"first":true,"numberOfElements":1,"empty":false}
+             Body = {"content":[{"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-16T16:42:30.578037","updatedAt":"2025-08-16T16:42:30.578071"}],"pageable":{"pageNumber":0,"pageSize":20,"sort":{"empty":false,"sorted":true,"unsorted":false},"offset":0,"paged":true,"unpaged":false},"last":true,"totalElements":1,"totalPages":1,"size":20,"number":0,"sort":{"empty":false,"sorted":true,"unsorted":false},"numberOfElements":1,"first":true,"empty":false}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleErrorScenariosCorrectly" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.048">
+  <testcase name="shouldHandleErrorScenariosCorrectly" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.066">
     <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
 	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleErrorScenariosCorrectly(ExpenseTrackerH2IntegrationTest.java:455)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleErrorScenariosCorrectly(ExpenseTrackerH2IntegrationTest.java:450)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[2025-08-16T16:28:56.916+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation error occurred: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fintech.expensetracker.dto.response.AccountResponse> com.fintech.expensetracker.controller.AccountController.createAccount(com.fintech.expensetracker.dto.request.CreateAccountRequest,com.fintech.expensetracker.security.UserPrincipal): [Field error in object 'createAccountRequest' on field 'name': rejected value []; codes [NotBlank.createAccountRequest.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createAccountRequest.name,name]; arguments []; default message [name]]; default message [Account name is required]] 
-2025-08-16T16:28:56.922+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 99999 for user ID: 1
-2025-08-16T16:28:56.922+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 99999 for user ID: 1
-2025-08-16T16:28:56.925+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Resource not found exception: Account not found with ID: 99999 for user ID: 1
-2025-08-16T16:28:56.933+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation error occurred: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fintech.expensetracker.dto.response.TransactionResponse> com.fintech.expensetracker.controller.TransactionController.createTransaction(com.fintech.expensetracker.dto.request.CreateTransactionRequest,com.fintech.expensetracker.security.UserPrincipal) with 2 errors: [Field error in object 'createTransactionRequest' on field 'amount': rejected value [0.00]; codes [DecimalMin.createTransactionRequest.amount,DecimalMin.amount,DecimalMin.java.math.BigDecimal,DecimalMin]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createTransactionRequest.amount,amount]; arguments []; default message [amount],true,0.01]; default message [Amount must be greater than 0]] [Field error in object 'createTransactionRequest' on field 'description': rejected value []; codes [NotBlank.createTransactionRequest.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createTransactionRequest.description,description]; arguments []; default message [description]]; default message [Description is required]] 
-2025-08-16T16:28:56.938+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 99.999 and description: 'Precision Test'
-2025-08-16T16:28:56.943+03:00  WARN 9452 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Validation failed for classes [com.fintech.expensetracker.entity.Transaction] during persist time for groups [jakarta.validation.groups.Default, ]
+    <system-out><![CDATA[2025-08-16T16:42:30.914+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation error occurred: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fintech.expensetracker.dto.response.AccountResponse> com.fintech.expensetracker.controller.AccountController.createAccount(com.fintech.expensetracker.dto.request.CreateAccountRequest,com.fintech.expensetracker.security.UserPrincipal): [Field error in object 'createAccountRequest' on field 'name': rejected value []; codes [NotBlank.createAccountRequest.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createAccountRequest.name,name]; arguments []; default message [name]]; default message [Account name is required]] 
+2025-08-16T16:42:30.922+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 99999 for user ID: 1
+2025-08-16T16:42:30.923+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 99999 for user ID: 1
+2025-08-16T16:42:30.926+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Resource not found exception: Account not found with ID: 99999 for user ID: 1
+2025-08-16T16:42:30.935+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation error occurred: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fintech.expensetracker.dto.response.TransactionResponse> com.fintech.expensetracker.controller.TransactionController.createTransaction(com.fintech.expensetracker.dto.request.CreateTransactionRequest,com.fintech.expensetracker.security.UserPrincipal) with 2 errors: [Field error in object 'createTransactionRequest' on field 'amount': rejected value [0.00]; codes [DecimalMin.createTransactionRequest.amount,DecimalMin.amount,DecimalMin.java.math.BigDecimal,DecimalMin]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createTransactionRequest.amount,amount]; arguments []; default message [amount],true,0.01]; default message [Amount must be greater than 0]] [Field error in object 'createTransactionRequest' on field 'description': rejected value []; codes [NotBlank.createTransactionRequest.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createTransactionRequest.description,description]; arguments []; default message [description]]; default message [Description is required]] 
+2025-08-16T16:42:30.944+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 99.999 and description: 'Precision Test'
+2025-08-16T16:42:30.948+03:00  WARN 10047 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Validation failed for classes [com.fintech.expensetracker.entity.Transaction] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Amount must be greater than 0', propertyPath=amount, rootBeanClass=class com.fintech.expensetracker.entity.Transaction, messageTemplate='Amount must be greater than 0'}
 ]
@@ -579,7 +581,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ", Content-Length:"48"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA", Content-Length:"48"]
              Body = {"name":"","type":"CHECKING","initialBalance":0}
     Session Attrs = {}
 
@@ -607,7 +609,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.917048","status":400,"error":"Validation Error","message":"Invalid input data","path":"/api/v1/accounts","details":{"name":"Account name is required"}}
+             Body = {"timestamp":"2025-08-16T16:42:30.914647","status":400,"error":"Validation Error","message":"Invalid input data","path":"/api/v1/accounts","details":{"name":"Account name is required"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -616,7 +618,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/accounts/99999/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -644,7 +646,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.925288","status":404,"error":"Resource Not Found","message":"Account not found with ID: 99999 for user ID: 1","path":"/api/v1/accounts/99999/balance","details":null}
+             Body = {"timestamp":"2025-08-16T16:42:30.926383","status":404,"error":"Resource Not Found","message":"Account not found with ID: 99999 for user ID: 1","path":"/api/v1/accounts/99999/balance","details":null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -653,7 +655,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ", Content-Length:"104"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA", Content-Length:"104"]
              Body = {"amount":0.00,"description":"","transactionDate":null,"accountId":1,"categoryId":null,"type":"EXPENSE"}
     Session Attrs = {}
 
@@ -681,7 +683,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.933573","status":400,"error":"Validation Error","message":"Invalid input data","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0","description":"Description is required"}}
+             Body = {"timestamp":"2025-08-16T16:42:30.936136","status":400,"error":"Validation Error","message":"Invalid input data","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0","description":"Description is required"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -690,7 +692,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ", Content-Length:"128"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA", Content-Length:"128"]
              Body = {"amount":99.999,"description":"Precision Test","transactionDate":"2025-08-16","accountId":1,"categoryId":null,"type":"EXPENSE"}
     Session Attrs = {}
 
@@ -718,35 +720,35 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-16T16:28:56.9436","status":400,"error":"Validation Error","message":"Constraint validation failed","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0"}}
+             Body = {"timestamp":"2025-08-16T16:42:30.94891","status":400,"error":"Validation Error","message":"Constraint validation failed","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleSoftDeleteCorrectly" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.028">
+  <testcase name="shouldHandleSoftDeleteCorrectly" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="0.034">
     <failure message="JSON path &quot;$.length()&quot; expected:&lt;5&gt; but was:&lt;11&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: JSON path "$.length()" expected:<5> but was:<11>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
 	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
 	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleSoftDeleteCorrectly(ExpenseTrackerH2IntegrationTest.java:471)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldHandleSoftDeleteCorrectly(ExpenseTrackerH2IntegrationTest.java:466)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[2025-08-16T16:28:56.956+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Deleting transaction ID: 1 for user ID: 1
-2025-08-16T16:28:56.963+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Soft deleted transaction with ID 1 for user 1
-2025-08-16T16:28:56.966+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully deleted transaction ID: 1 for user ID: 1
-2025-08-16T16:28:56.971+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
-2025-08-16T16:28:56.973+03:00  INFO 9452 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieved 0 transactions for user ID: 1 (page 1/0)
+    <system-out><![CDATA[2025-08-16T16:42:30.966+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Deleting transaction ID: 1 for user ID: 1
+2025-08-16T16:42:30.975+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Soft deleted transaction with ID 1 for user 1
+2025-08-16T16:42:30.977+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully deleted transaction ID: 1 for user ID: 1
+2025-08-16T16:42:30.982+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+2025-08-16T16:42:30.984+03:00  INFO 10047 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieved 0 transactions for user ID: 1 (page 1/0)
 
 MockHttpServletRequest:
       HTTP Method = DELETE
       Request URI = /api/v1/transactions/1
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -783,7 +785,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUwOTM2LCJleHAiOjE3NTUzNTQ1MzZ9.M-sMOf7sNlvdB4zNecO2_xJBvY4cRh_uUjTM7tOmigPaTdHYpvZ5rSLg1YJqkAC9-2sUdUsFAk0ywca1K20rPQ"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1MzUxNzUwLCJleHAiOjE3NTUzNTUzNTB9.1i4b8WeUHRlhyXyv2n-qNXmI66ldUu_1NMlN80z_tc39WKeFmT8iyL9osXtjY23L_vTBd9GC2HcZQs6Q1JtBsA"]
              Body = null
     Session Attrs = {}
 
@@ -811,7 +813,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"content":[],"pageable":{"pageNumber":0,"pageSize":20,"sort":{"empty":false,"unsorted":false,"sorted":true},"offset":0,"paged":true,"unpaged":false},"last":true,"totalElements":0,"totalPages":0,"size":20,"number":0,"sort":{"empty":false,"unsorted":false,"sorted":true},"first":true,"numberOfElements":0,"empty":true}
+             Body = {"content":[],"pageable":{"pageNumber":0,"pageSize":20,"sort":{"empty":false,"sorted":true,"unsorted":false},"offset":0,"paged":true,"unpaged":false},"last":true,"totalElements":0,"totalPages":0,"size":20,"number":0,"sort":{"empty":false,"sorted":true,"unsorted":false},"numberOfElements":0,"first":true,"empty":true}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []

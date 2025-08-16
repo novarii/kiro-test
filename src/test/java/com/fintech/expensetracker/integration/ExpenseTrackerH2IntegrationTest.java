@@ -252,8 +252,7 @@ class ExpenseTrackerH2IntegrationTest {
         // Test monthly spending summary
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("year", String.valueOf(currentMonth.getYear()))
-                        .param("month", String.valueOf(currentMonth.getMonthValue())))
+                        .param("month", currentMonth.toString()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(3200.00))
                 .andExpect(jsonPath("$.totalExpenses").value(1850.00))
@@ -290,8 +289,7 @@ class ExpenseTrackerH2IntegrationTest {
         YearMonth futureMonth = YearMonth.now().plusMonths(6);
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("year", String.valueOf(futureMonth.getYear()))
-                        .param("month", String.valueOf(futureMonth.getMonthValue())))
+                        .param("month", futureMonth.toString()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(0.00))
                 .andExpect(jsonPath("$.totalExpenses").value(0.00))
@@ -378,15 +376,13 @@ class ExpenseTrackerH2IntegrationTest {
         YearMonth currentMonth = YearMonth.now();
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("year", String.valueOf(currentMonth.getYear()))
-                        .param("month", String.valueOf(currentMonth.getMonthValue())))
+                        .param("month", currentMonth.toString()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(3200.00)); // Should not include second user's income
 
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + secondUserToken)
-                        .param("year", String.valueOf(currentMonth.getYear()))
-                        .param("month", String.valueOf(currentMonth.getMonthValue())))
+                        .param("month", currentMonth.toString()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(1000.00))
                 .andExpect(jsonPath("$.totalExpenses").value(0.00));
@@ -473,8 +469,7 @@ class ExpenseTrackerH2IntegrationTest {
         YearMonth currentMonth = YearMonth.now();
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
                         .header("Authorization", "Bearer " + userToken)
-                        .param("year", String.valueOf(currentMonth.getYear()))
-                        .param("month", String.valueOf(currentMonth.getMonthValue())))
+                        .param("month", currentMonth.toString()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalIncome").value(0.00)); // Income transaction was deleted
     }

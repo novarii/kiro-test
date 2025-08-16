@@ -25,6 +25,7 @@
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/response/AccountResponse.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/repository/TransactionRepository.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/response/CategoryResponse.java
+/Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/exception/ValidationException.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/exception/ResourceNotFoundException.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/response/MonthlySpendingSummaryResponse.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/UpdateTransactionRequest.java

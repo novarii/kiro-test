@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.026" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.472" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -8,6 +8,7 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="user.timezone" value="Europe/Istanbul"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -29,6 +30,8 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
     <property name="surefire.real.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250816113822955_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -45,10 +48,13 @@
     <property name="localRepository" value="/Users/bahadirbozoglu/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/_s/2mvngjb15351mc7ctsrcz5sh0000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.8"/>
     <property name="user.dir" value="/Users/bahadirbozoglu/Projects/Test/kiro-test"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="4756"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/bahadirbozoglu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -58,17 +64,128 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[expense-tracker] "/>
   </properties>
-  <testcase name="getMonthlySpendingSummary_WithIncomeAndExpenses_ReturnsCorrectSummary" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="calculateSavingsRate_WithZeroIncome_ReturnsZero" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
-  <testcase name="getSpendingByCategory_WithNoExpenses_ReturnsEmptyBreakdown" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
-  <testcase name="getTrendAnalysis_WithNullValues_HandlesGracefully" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
-  <testcase name="getMonthlySpendingSummary_WithNoIncome_ReturnsZeroSavingsRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="getTrendAnalysis_WithNoData_ReturnsZeroFilledMonths" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
-  <testcase name="calculateSavingsRate_WithPositiveIncome_ReturnsCorrectRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="getSpendingByCategory_WithMultipleCategories_ReturnsCorrectBreakdown" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="getSpendingByCategory_WithSingleCategory_CalculatesHundredPercent" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="calculateSavingsRate_WithExpensesExceedingIncome_ReturnsNegativeRate" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.002"/>
-  <testcase name="getMonthlySpendingSummary_WithNullValues_HandlesGracefully" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
-  <testcase name="getTrendAnalysis_WithMultipleMonths_ReturnsCompleteData" classname="com.fintech.expensetracker.service.AnalyticsServiceTest" time="0.001"/>
+  <testcase name="handleResourceNotFoundException_ShouldReturnNotFound" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.064">
+    <system-out><![CDATA[2025-08-16T11:38:33.248+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Resource not found exception: Resource not found
+]]></system-out>
+  </testcase>
+  <testcase name="handleConstraintViolationException_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.174">
+    <system-out><![CDATA[2025-08-16T11:38:33.415+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Constraint violation
+]]></system-out>
+  </testcase>
+  <testcase name="handleDataIntegrityViolationException_GenericMessage_ShouldReturnConflict" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.003">
+    <system-out><![CDATA[2025-08-16T11:38:33.428+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Data integrity violation: Some other constraint violation
+]]></system-out>
+  </testcase>
+  <testcase name="handleMethodArgumentTypeMismatchException_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.069">
+    <system-out><![CDATA[2025-08-16T11:38:33.496+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Method argument type mismatch: Type mismatch
+]]></system-out>
+  </testcase>
+  <testcase name="handleValidationException_WithValidationErrors_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.003">
+    <system-out><![CDATA[2025-08-16T11:38:33.501+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation exception: Validation failed
+]]></system-out>
+  </testcase>
+  <testcase name="handleAccessDeniedException_ShouldReturnForbidden" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.002">
+    <system-out><![CDATA[2025-08-16T11:38:33.503+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Access denied: Access denied
+]]></system-out>
+  </testcase>
+  <testcase name="handleAuthenticationException_BadCredentials_ShouldReturnUnauthorized" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.002">
+    <system-out><![CDATA[2025-08-16T11:38:33.506+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Authentication failed: Bad credentials
+]]></system-out>
+  </testcase>
+  <testcase name="handleValidationExceptions_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.132">
+    <system-out><![CDATA[2025-08-16T11:38:33.638+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation error occurred: Validation failed
+]]></system-out>
+  </testcase>
+  <testcase name="handleDataIntegrityViolationException_ShouldReturnConflict" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.001">
+    <system-out><![CDATA[2025-08-16T11:38:33.641+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Data integrity violation: Unique index violation
+]]></system-out>
+  </testcase>
+  <testcase name="handleGlobalException_ShouldReturnInternalServerError" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.009">
+    <system-out><![CDATA[2025-08-16T11:38:33.643+03:00 ERROR 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Unexpected error occurred: Unexpected error
+
+java.lang.RuntimeException: Unexpected error
+	at com.fintech.expensetracker.exception.GlobalExceptionHandlerTest.handleGlobalException_ShouldReturnInternalServerError(GlobalExceptionHandlerTest.java:281) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.1.jar:1.10.1]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]
+
+]]></system-out>
+  </testcase>
+  <testcase name="handleValidationException_WithoutValidationErrors_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.002">
+    <system-out><![CDATA[2025-08-16T11:38:33.654+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Validation exception: Simple validation error
+]]></system-out>
+  </testcase>
+  <testcase name="handleBadRequestException_ShouldReturnBadRequest" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.001">
+    <system-out><![CDATA[2025-08-16T11:38:33.656+03:00  WARN 4756 --- [expense-tracker] [           main] c.f.e.exception.GlobalExceptionHandler   : Bad request exception: Invalid request data
+]]></system-out>
+  </testcase>
+  <testcase name="errorResponse_AllConstructors_ShouldWorkCorrectly" classname="com.fintech.expensetracker.exception.GlobalExceptionHandlerTest" time="0.001"/>
 </testsuite>

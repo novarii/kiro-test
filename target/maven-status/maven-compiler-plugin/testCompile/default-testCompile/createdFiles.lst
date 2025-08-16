@@ -2,6 +2,7 @@ com/fintech/expensetracker/controller/AccountControllerTest.class
 com/fintech/expensetracker/controller/AuthControllerTest.class
 com/fintech/expensetracker/security/JwtTokenProviderTest.class
 com/fintech/expensetracker/service/AccountServiceTest.class
+com/fintech/expensetracker/exception/GlobalExceptionHandlerTest.class
 com/fintech/expensetracker/service/TransactionServiceTest.class
 com/fintech/expensetracker/service/AnalyticsServiceTest.class
 com/fintech/expensetracker/controller/AnalyticsControllerTest.class

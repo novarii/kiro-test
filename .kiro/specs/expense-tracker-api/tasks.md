@@ -107,7 +107,7 @@
   - Write tests for exception handling scenarios
   - _Requirements: 5.4, 5.5, 6.3_
 
-- [ ] 15. Add database initialization and default data
+- [x] 15. Add database initialization and default data
   - Create database schema initialization scripts
   - Add default categories including "Uncategorized"
   - Implement data migration scripts if needed

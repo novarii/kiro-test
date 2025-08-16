@@ -7,6 +7,7 @@
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/security/UserPrincipal.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/service/AccountService.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/UserRegistrationRequest.java
+/Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/config/DatabaseConfig.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/entity/Account.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/CreateAccountRequest.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/UpdateAccountRequest.java
@@ -16,6 +17,7 @@
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/service/AnalyticsService.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/repository/AccountRepository.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/config/SecurityConfig.java
+/Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/util/DatabaseMigrationUtil.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/exception/BadRequestException.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/TransactionFilter.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/CreateTransactionRequest.java

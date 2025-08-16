@@ -9,6 +9,7 @@ com/fintech/expensetracker/service/AnalyticsService.class
 com/fintech/expensetracker/controller/AccountController.class
 com/fintech/expensetracker/dto/request/UserRegistrationRequest.class
 com/fintech/expensetracker/dto/request/LoginRequest.class
+com/fintech/expensetracker/util/DatabaseMigrationUtil.class
 com/fintech/expensetracker/service/AccountService.class
 com/fintech/expensetracker/security/CustomUserDetailsService.class
 com/fintech/expensetracker/dto/response/AccountResponse.class
@@ -17,6 +18,7 @@ com/fintech/expensetracker/controller/AnalyticsController$TrendAnalysisResponse.
 com/fintech/expensetracker/entity/Category.class
 com/fintech/expensetracker/entity/Account.class
 com/fintech/expensetracker/dto/response/TransactionResponse.class
+com/fintech/expensetracker/config/DatabaseConfig.class
 com/fintech/expensetracker/exception/ResourceNotFoundException.class
 com/fintech/expensetracker/dto/request/UpdateAccountRequest.class
 com/fintech/expensetracker/dto/request/CreateTransactionRequest.class

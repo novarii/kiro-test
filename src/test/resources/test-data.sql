@@ -1,0 +1,2 @@
+-- Test data will be created by the integration tests
+-- This file is intentionally empty to prevent data.sql from running during tests

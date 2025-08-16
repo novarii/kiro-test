@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.fintech.expensetracker.ExpenseTrackerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.617 s -- in com.fintech.expensetracker.ExpenseTrackerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.026 s -- in com.fintech.expensetracker.ExpenseTrackerApplicationTests

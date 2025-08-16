@@ -12,6 +12,7 @@
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/dto/request/UpdateAccountRequest.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/repository/UserRepository.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/ExpenseTrackerApplication.java
+/Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/controller/AnalyticsController.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/service/AnalyticsService.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/repository/AccountRepository.java
 /Users/bahadirbozoglu/Projects/Test/kiro-test/src/main/java/com/fintech/expensetracker/config/SecurityConfig.java

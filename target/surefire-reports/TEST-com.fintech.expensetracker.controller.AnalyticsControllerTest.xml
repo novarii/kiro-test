@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.service.TransactionServiceTest" time="0.136" tests="19" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.087" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,47 +59,63 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="getAccountTransactions_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.076"/>
-  <testcase name="getUserTransactions_WithAccountFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.005"/>
-  <testcase name="createTransaction_ValidIncomeRequest_ReturnsTransactionResponse" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003">
-    <system-out><![CDATA[10:21:25.877 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 2 for user 1
+  <testcase name="getSpendingByCategory_InvalidDateRange_ThrowsIllegalArgumentException" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.04"/>
+  <testcase name="getMonthlySpendingSummary_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.958 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving monthly spending summary for user ID: 1 and month: 2024-01
 ]]></system-out>
   </testcase>
-  <testcase name="updateTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="updateTransaction_UpdateAccount_ValidatesAccountOwnership" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.006">
-    <system-out><![CDATA[10:21:25.882 [main] INFO com.fintech.expensetracker.service.TransactionService -- Transaction update audit - User: 1, Transaction ID: 1, Original: [amount=-50.0, description='Grocery shopping', date=2025-08-16, account=1, category=1], Update request: UpdateTransactionRequest{amount=null, description='null', transactionDate=null, accountId=2, categoryId=null, type=null}
-10:21:25.887 [main] INFO com.fintech.expensetracker.service.TransactionService -- Updated transaction with ID 1 for user 1
+  <testcase name="getSavingsRate_ValidDateRange_ReturnsSavingsRate" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.961 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Calculating savings rate for user ID: 1 from 2024-01-01 to 2024-01-31
+10:21:24.962 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Calculated savings rate for user ID: 1 from 2024-01-01 to 2024-01-31: 30.00%
 ]]></system-out>
   </testcase>
-  <testcase name="createTransaction_WithoutCategory_UsesDefaultCategory" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003">
-    <system-out><![CDATA[10:21:25.891 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+  <testcase name="getSpendingByCategory_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.965 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving spending by category for user ID: 1 from 2024-01-01 to 2024-01-31
 ]]></system-out>
   </testcase>
-  <testcase name="getTransactionById_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="getUserTransactions_NoFilter_ReturnsAllUserTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.001"/>
-  <testcase name="updateTransaction_ValidRequest_ReturnsUpdatedTransaction" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002">
-    <system-out><![CDATA[10:21:25.899 [main] INFO com.fintech.expensetracker.service.TransactionService -- Transaction update audit - User: 1, Transaction ID: 1, Original: [amount=-50.0, description='Grocery shopping', date=2025-08-16, account=1, category=1], Update request: UpdateTransactionRequest{amount=75.0, description='Updated grocery shopping', transactionDate=null, accountId=null, categoryId=null, type=EXPENSE}
-10:21:25.899 [main] INFO com.fintech.expensetracker.service.TransactionService -- Updated transaction with ID 1 for user 1
+  <testcase name="getSavingsRate_InvalidDateRange_ThrowsIllegalArgumentException" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.004"/>
+  <testcase name="getTrendAnalysis_SingleMonth_ReturnsSingleMonthTrend" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.004">
+    <system-out><![CDATA[10:21:24.972 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving trend analysis for user ID: 1 from 2024-01-01 to 2024-01-31
+10:21:24.973 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved trend analysis for user ID: 1 from 2024-01-01 to 2024-01-31 - 1 months of data
 ]]></system-out>
   </testcase>
-  <testcase name="getUserTransactions_WithDateRangeFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="getUserTransactions_WithCategoryFilter_ReturnsFilteredTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="createTransaction_AccountNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="getTransactionById_ValidId_ReturnsTransaction" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.001"/>
-  <testcase name="getAccountTransactions_ValidAccount_ReturnsTransactions" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003"/>
-  <testcase name="createTransaction_CategoryNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
-  <testcase name="createTransaction_ValidExpenseRequest_ReturnsTransactionResponse" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002">
-    <system-out><![CDATA[10:21:25.917 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+  <testcase name="getSpendingByCategory_SameDateRange_ReturnsSpendingByCategory" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.975 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving spending by category for user ID: 1 from 2024-01-15 to 2024-01-15
+10:21:24.976 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved spending by category for user ID: 1 - Total expenses: 3500.00, Categories: 2
 ]]></system-out>
   </testcase>
-  <testcase name="createTransaction_NoDefaultCategoryExists_CreatesDefaultCategory" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.004">
-    <system-out><![CDATA[10:21:25.921 [main] INFO com.fintech.expensetracker.service.TransactionService -- Creating default category: Uncategorized
-10:21:25.921 [main] INFO com.fintech.expensetracker.service.TransactionService -- Created transaction with ID 1 for user 1
+  <testcase name="getSavingsRate_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.978 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Calculating savings rate for user ID: 1 from 2024-01-01 to 2024-01-31
 ]]></system-out>
   </testcase>
-  <testcase name="softDeleteTransaction_ValidId_MarksTransactionAsDeleted" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.003">
-    <system-out><![CDATA[10:21:25.925 [main] INFO com.fintech.expensetracker.service.TransactionService -- Soft deleted transaction with ID 1 for user 1
+  <testcase name="getTrendAnalysis_ValidDateRange_ReturnsTrendAnalysis" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.981 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving trend analysis for user ID: 1 from 2024-01-01 to 2024-02-29
+10:21:24.982 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved trend analysis for user ID: 1 from 2024-01-01 to 2024-02-29 - 2 months of data
 ]]></system-out>
   </testcase>
-  <testcase name="softDeleteTransaction_TransactionNotFound_ThrowsResourceNotFoundException" classname="com.fintech.expensetracker.service.TransactionServiceTest" time="0.002"/>
+  <testcase name="getTrendAnalysis_InvalidDateRange_ThrowsIllegalArgumentException" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.004"/>
+  <testcase name="getSpendingByCategory_ValidDateRange_ReturnsSpendingByCategory" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.003">
+    <system-out><![CDATA[10:21:24.990 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving spending by category for user ID: 1 from 2024-01-01 to 2024-01-31
+10:21:24.990 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved spending by category for user ID: 1 - Total expenses: 3500.00, Categories: 2
+]]></system-out>
+  </testcase>
+  <testcase name="getMonthlySpendingSummary_NoTransactionsInMonth_ReturnsZeroValues" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.993 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving monthly spending summary for user ID: 1 and month: 2024-12
+10:21:24.993 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved monthly spending summary for user ID: 1 and month: 2024-12 - Income: 0, Expenses: 0, Savings: 0
+]]></system-out>
+  </testcase>
+  <testcase name="getSavingsRate_NoIncomeInPeriod_ReturnsZeroSavingsRate" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.002">
+    <system-out><![CDATA[10:21:24.995 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Calculating savings rate for user ID: 1 from 2024-01-01 to 2024-01-31
+10:21:24.995 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Calculated savings rate for user ID: 1 from 2024-01-01 to 2024-01-31: 0%
+]]></system-out>
+  </testcase>
+  <testcase name="getTrendAnalysis_ServiceThrowsException_ExceptionPropagated" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.003">
+    <system-out><![CDATA[10:21:24.998 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving trend analysis for user ID: 1 from 2024-01-01 to 2024-02-29
+]]></system-out>
+  </testcase>
+  <testcase name="getMonthlySpendingSummary_ValidMonth_ReturnsMonthlySpendingSummary" classname="com.fintech.expensetracker.controller.AnalyticsControllerTest" time="0.003">
+    <system-out><![CDATA[10:21:25.001 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieving monthly spending summary for user ID: 1 and month: 2024-01
+10:21:25.001 [main] INFO com.fintech.expensetracker.controller.AnalyticsController -- Retrieved monthly spending summary for user ID: 1 and month: 2024-01 - Income: 5000.00, Expenses: 3500.00, Savings: 1500.00
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -66,6 +66,20 @@ public class TransactionService {
     public TransactionResponse createTransaction(CreateTransactionRequest request, Long userId) {
         logger.debug("Creating transaction for user {} with request: {}", userId, request);
         
+        // DEBUG: Log the exact values being received
+        logger.info("DEBUG - Amount received: [{}], Type: [{}], Class: [{}]", 
+                   request.getAmount(), 
+                   request.getType(),
+                   request.getAmount() != null ? request.getAmount().getClass().getName() : "null");
+        
+        if (request.getAmount() != null) {
+            logger.info("DEBUG - Amount details: value=[{}], scale=[{}], precision=[{}], signum=[{}]",
+                       request.getAmount().toString(),
+                       request.getAmount().scale(),
+                       request.getAmount().precision(),
+                       request.getAmount().signum());
+        }
+        
         // Validate and get account
         Account account = accountRepository.findByIdAndUserIdAndDeletedFalse(request.getAccountId(), userId)
                 .orElseThrow(() -> new ResourceNotFoundException(
@@ -281,15 +295,25 @@ public class TransactionService {
      * Income = positive, Expense = negative
      */
     private BigDecimal convertAmountByType(BigDecimal amount, TransactionType type) {
+        logger.info("DEBUG - convertAmountByType called with amount: [{}], type: [{}]", amount, type);
+        
         if (amount == null || type == null) {
+            logger.error("DEBUG - Amount or type is null! Amount: [{}], Type: [{}]", amount, type);
             throw new BadRequestException("Amount and transaction type are required");
         }
         
+        logger.info("DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [{}]", 
+                   amount.compareTo(BigDecimal.ZERO));
+        
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
+            logger.error("DEBUG - Amount validation failed! Amount: [{}], signum: [{}], scale: [{}]", 
+                        amount, amount.signum(), amount.scale());
             throw new BadRequestException("Amount must be greater than zero");
         }
         
-        return type == TransactionType.INCOME ? amount : amount.negate();
+        BigDecimal result = type == TransactionType.INCOME ? amount : amount.negate();
+        logger.info("DEBUG - Converted amount: [{}] -> [{}] for type: [{}]", amount, result, type);
+        return result;
     }
     
     /**

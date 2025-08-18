@@ -216,11 +216,13 @@ class ExpenseTrackerH2IntegrationTest {
         UpdateTransactionRequest updateTransactionRequest = new UpdateTransactionRequest();
         updateTransactionRequest.setDescription("Updated Monthly Salary");
         updateTransactionRequest.setAmount(new BigDecimal("3200.00"));
+        updateTransactionRequest.setType(TransactionType.INCOME);  
 
         mockMvc.perform(put("/api/v1/transactions/" + transactionId)
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(updateTransactionRequest)))
+                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.description").value("Updated Monthly Salary"))
                 .andExpect(jsonPath("$.amount").value(3200.00));

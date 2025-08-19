@@ -406,7 +406,7 @@ class ExpenseTrackerH2IntegrationTest {
                 .andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.message").exists());
 
-        // Test invalid transaction data
+        // Test invalid transaction data 
         CreateTransactionRequest invalidTransaction = new CreateTransactionRequest();
         invalidTransaction.setAmount(new BigDecimal("0.00")); // Invalid zero amount
         invalidTransaction.setDescription("");

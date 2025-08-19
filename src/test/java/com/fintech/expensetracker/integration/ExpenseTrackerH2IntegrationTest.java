@@ -202,8 +202,8 @@ class ExpenseTrackerH2IntegrationTest {
         mockMvc.perform(get("/api/v1/transactions")
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray())
-                .andExpect(jsonPath("$.length()").value(5)); // 1 income + 4 expenses
+                .andExpect(jsonPath("$.content").isArray())  // Changed from "$" to "$.content"
+                .andExpect(jsonPath("$.content.length()").value(5)); // Changed from "$.length()" to "$.content.length()" // 1 income + 4 expenses
 
         // Filter transactions by type
         mockMvc.perform(get("/api/v1/transactions")

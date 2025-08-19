@@ -26,6 +26,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -93,8 +94,9 @@ public class TransactionService {
                 request.getTransactionDate() : LocalDate.now();
         
         // Convert amount based on transaction type
-        BigDecimal amount = convertAmountByType(request.getAmount(), request.getType());
-        
+        BigDecimal roundedAmount = request.getAmount().setScale(2, RoundingMode.HALF_UP);
+        BigDecimal amount = convertAmountByType(roundedAmount, request.getType());
+
         // Create and save transaction
         Transaction transaction = new Transaction();
         transaction.setAmount(amount);
@@ -132,7 +134,8 @@ public class TransactionService {
         
         // Update fields if provided
         if (request.getAmount() != null && request.getType() != null) {
-            BigDecimal newAmount = convertAmountByType(request.getAmount(), request.getType());
+            BigDecimal newRoundedAmount = request.getAmount().setScale(2, RoundingMode.HALF_UP);
+            BigDecimal newAmount = convertAmountByType(newRoundedAmount, request.getType());
             existingTransaction.setAmount(newAmount);
         }
         

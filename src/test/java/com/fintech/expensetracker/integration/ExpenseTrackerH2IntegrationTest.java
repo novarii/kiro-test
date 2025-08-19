@@ -421,18 +421,18 @@ class ExpenseTrackerH2IntegrationTest {
 
         // Test financial precision
         CreateTransactionRequest precisionTest = new CreateTransactionRequest();
-        precisionTest.setAmount(new BigDecimal("99.999")); // Should be rounded to 2 decimal places
+        precisionTest.setAmount(new BigDecimal("123.4563131")); // Should be rounded to 2 decimal places
         precisionTest.setDescription("Precision Test");
         precisionTest.setTransactionDate(LocalDate.now());
         precisionTest.setAccountId(accountId);
-        precisionTest.setType(TransactionType.EXPENSE);
+        precisionTest.setType(TransactionType.INCOME);
 
         mockMvc.perform(post("/api/v1/transactions")
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(precisionTest)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.amount").value(100.00)); // Should be properly rounded
+                .andExpect(jsonPath("$.amount").value(123.46)); // Should be properly rounded
 
         // === SOFT DELETE TESTING ===
         

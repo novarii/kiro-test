@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.31 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow -- Time elapsed: 2.189 s <<< FAILURE!
-java.lang.AssertionError: No value at JSON path "$.year"
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.665 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
+com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow -- Time elapsed: 1.564 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.totalIncome"
 	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:302)
 	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:99)
 	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:248)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:271)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['year']
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['totalIncome']
 

@@ -256,10 +256,10 @@ class ExpenseTrackerH2IntegrationTest {
                         .param("startDate", startDate.toString())
                         .param("endDate", endDate.toString()))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray())
-                .andExpect(jsonPath("$.length()").value(1)) // All expenses are uncategorized
-                .andExpect(jsonPath("$[0].categoryName").value("Uncategorized"))
-                .andExpect(jsonPath("$[0].totalAmount").value(1850.00));
+                .andExpect(jsonPath("$.categoryBreakdown").isArray())  // Changed from "$" to "$.categoryBreakdown"
+                .andExpect(jsonPath("$.categoryBreakdown.length()").value(1))  // Changed from "$.length()" to "$.categoryBreakdown.length()"
+                .andExpect(jsonPath("$.categoryBreakdown[0].category.name").value("Uncategorized"))  // Changed from "$[0].categoryName" to "$.categoryBreakdown[0].category.name"
+                .andExpect(jsonPath("$.categoryBreakdown[0].amount").value(1850.00));  // Changed from "$[0].totalAmount" to "$.categoryBreakdown[0].amount"
 
         // Test savings rate calculation
         mockMvc.perform(get("/api/v1/analytics/savings-rate")

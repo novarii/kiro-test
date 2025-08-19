@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="7.818" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="14.308" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/test-classes:/Users/bahadirbozoglu/Projects/Test/kiro-test/target/classes:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.1/spring-boot-starter-web-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.1/spring-boot-starter-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot/3.2.1/spring-boot-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.1/spring-boot-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.1/spring-boot-starter-logging-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/bahadirbozoglu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.1/spring-boot-starter-json-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.1/spring-boot-starter-tomcat-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.17/tomcat-embed-core-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.17/tomcat-embed-websocket-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-web/6.1.2/spring-web-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-beans/6.1.2/spring-beans-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-context/6.1.2/spring-context-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.1/spring-boot-starter-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.1/spring-boot-starter-aop-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.1/spring-boot-starter-jdbc-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/orm/hibernate-core/6.4.1.Final/hibernate-core-6.4.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/bahadirbozoglu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.1/spring-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-commons/3.2.1/spring-data-commons-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-orm/6.1.2/spring-orm-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aspects/6.1.2/spring-aspects-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.1/spring-boot-starter-security-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aop/6.1.2/spring-aop-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-config/6.2.1/spring-security-config-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-web/6.2.1/spring-security-web-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.1/spring-boot-starter-validation-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.17/tomcat-embed-el-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/bahadirbozoglu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.1/spring-boot-starter-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.1/spring-boot-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.1/spring-boot-test-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/bahadirbozoglu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/bahadirbozoglu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/bahadirbozoglu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-core/6.1.2/spring-core-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jcl/6.1.2/spring-jcl-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-test/6.1.2/spring-test-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-test/6.2.1/spring-security-test-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-core/6.2.1/spring-security-core-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.1/spring-security-crypto-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/bahadirbozoglu/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/bahadirbozoglu/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/bahadirbozoglu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:"/>
+    <property name="java.class.path" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/test-classes:/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/classes:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.1/spring-boot-starter-web-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.1/spring-boot-starter-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot/3.2.1/spring-boot-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.1/spring-boot-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.1/spring-boot-starter-logging-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/bahadirbozoglu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.1/spring-boot-starter-json-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.1/spring-boot-starter-tomcat-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.17/tomcat-embed-core-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.17/tomcat-embed-websocket-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-web/6.1.2/spring-web-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-beans/6.1.2/spring-beans-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-context/6.1.2/spring-context-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.1/spring-boot-starter-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.1/spring-boot-starter-aop-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.1/spring-boot-starter-jdbc-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/orm/hibernate-core/6.4.1.Final/hibernate-core-6.4.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/bahadirbozoglu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.1/spring-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-commons/3.2.1/spring-data-commons-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-orm/6.1.2/spring-orm-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aspects/6.1.2/spring-aspects-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.1/spring-boot-starter-security-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aop/6.1.2/spring-aop-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-config/6.2.1/spring-security-config-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-web/6.2.1/spring-security-web-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.1/spring-boot-starter-validation-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.17/tomcat-embed-el-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/bahadirbozoglu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.1/spring-boot-starter-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.1/spring-boot-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.1/spring-boot-test-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/bahadirbozoglu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/bahadirbozoglu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/bahadirbozoglu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-core/6.1.2/spring-core-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jcl/6.1.2/spring-jcl-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-test/6.1.2/spring-test-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-test/6.2.1/spring-security-test-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-core/6.2.1/spring-security-core-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.1/spring-security-crypto-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/bahadirbozoglu/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/bahadirbozoglu/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/bahadirbozoglu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -14,11 +14,11 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250818115708160_3.jar /Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire 2025-08-18T11-57-08_065-jvmRun1 surefire-20250818115708160_1tmp surefire_0-20250818115708160_2tmp"/>
+    <property name="sun.java.command" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/surefire/surefirebooter-20250819150012617_3.jar /Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/surefire 2025-08-19T15-00-12_493-jvmRun1 surefire-20250819150012617_1tmp surefire_0-20250819150012617_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ExpenseTrackerH2IntegrationTest"/>
-    <property name="surefire.test.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/test-classes:/Users/bahadirbozoglu/Projects/Test/kiro-test/target/classes:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.1/spring-boot-starter-web-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.1/spring-boot-starter-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot/3.2.1/spring-boot-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.1/spring-boot-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.1/spring-boot-starter-logging-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/bahadirbozoglu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.1/spring-boot-starter-json-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.1/spring-boot-starter-tomcat-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.17/tomcat-embed-core-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.17/tomcat-embed-websocket-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-web/6.1.2/spring-web-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-beans/6.1.2/spring-beans-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-context/6.1.2/spring-context-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.1/spring-boot-starter-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.1/spring-boot-starter-aop-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.1/spring-boot-starter-jdbc-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/orm/hibernate-core/6.4.1.Final/hibernate-core-6.4.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/bahadirbozoglu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.1/spring-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-commons/3.2.1/spring-data-commons-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-orm/6.1.2/spring-orm-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aspects/6.1.2/spring-aspects-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.1/spring-boot-starter-security-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aop/6.1.2/spring-aop-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-config/6.2.1/spring-security-config-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-web/6.2.1/spring-security-web-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.1/spring-boot-starter-validation-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.17/tomcat-embed-el-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/bahadirbozoglu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.1/spring-boot-starter-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.1/spring-boot-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.1/spring-boot-test-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/bahadirbozoglu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/bahadirbozoglu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/bahadirbozoglu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-core/6.1.2/spring-core-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jcl/6.1.2/spring-jcl-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-test/6.1.2/spring-test-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-test/6.2.1/spring-security-test-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-core/6.2.1/spring-security-core-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.1/spring-security-crypto-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/bahadirbozoglu/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/bahadirbozoglu/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/bahadirbozoglu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/test-classes:/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/classes:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.1/spring-boot-starter-web-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.1/spring-boot-starter-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot/3.2.1/spring-boot-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.1/spring-boot-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.1/spring-boot-starter-logging-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/bahadirbozoglu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.1/spring-boot-starter-json-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.1/spring-boot-starter-tomcat-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.17/tomcat-embed-core-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.17/tomcat-embed-websocket-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-web/6.1.2/spring-web-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-beans/6.1.2/spring-beans-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-context/6.1.2/spring-context-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.1/spring-boot-starter-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.1/spring-boot-starter-aop-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.1/spring-boot-starter-jdbc-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/orm/hibernate-core/6.4.1.Final/hibernate-core-6.4.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/bahadirbozoglu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/bahadirbozoglu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/bahadirbozoglu/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.1/spring-data-jpa-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/data/spring-data-commons/3.2.1/spring-data-commons-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-orm/6.1.2/spring-orm-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aspects/6.1.2/spring-aspects-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.1/spring-boot-starter-security-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-aop/6.1.2/spring-aop-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-config/6.2.1/spring-security-config-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-web/6.2.1/spring-security-web-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.1/spring-boot-starter-validation-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.17/tomcat-embed-el-10.1.17.jar:/Users/bahadirbozoglu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/bahadirbozoglu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.1/spring-boot-starter-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.1/spring-boot-test-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.1/spring-boot-test-autoconfigure-3.2.1.jar:/Users/bahadirbozoglu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/bahadirbozoglu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/bahadirbozoglu/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/bahadirbozoglu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/bahadirbozoglu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/bahadirbozoglu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/bahadirbozoglu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/bahadirbozoglu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/bahadirbozoglu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-core/6.1.2/spring-core-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-jcl/6.1.2/spring-jcl-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/spring-test/6.1.2/spring-test-6.1.2.jar:/Users/bahadirbozoglu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-test/6.2.1/spring-security-test-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-core/6.2.1/spring-security-core-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.1/spring-security-crypto-6.2.1.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/bahadirbozoglu/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/bahadirbozoglu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/bahadirbozoglu/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/bahadirbozoglu/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/bahadirbozoglu/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/bahadirbozoglu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/bahadirbozoglu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/bahadirbozoglu"/>
     <property name="user.language" value="en"/>
@@ -26,7 +26,7 @@
     <property name="java.version.date" value="2025-07-15"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/bahadirbozoglu/Projects/Test/kiro-test"/>
+    <property name="basedir" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -34,7 +34,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/bahadirbozoglu/Projects/Test/kiro-test/target/surefire/surefirebooter-20250818115708160_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test/target/surefire/surefirebooter-20250819150012617_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.8"/>
@@ -51,10 +51,10 @@
     <property name="java.io.tmpdir" value="/var/folders/_s/2mvngjb15351mc7ctsrcz5sh0000gn/T/"/>
     <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.8"/>
-    <property name="user.dir" value="/Users/bahadirbozoglu/Projects/Test/kiro-test"/>
+    <property name="user.dir" value="/Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="3924"/>
+    <property name="PID" value="20797"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/bahadirbozoglu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -67,19 +67,20 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[expense-tracker-test] "/>
   </properties>
-  <testcase name="shouldCompleteFullIntegrationWorkflow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="1.495">
-    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+  <testcase name="shouldCompleteFullIntegrationWorkflow" classname="com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest" time="2.189">
+    <failure message="No value at JSON path &quot;$.year&quot;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: No value at JSON path "$.year"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:302)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:99)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:196)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:248)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['year']
 ]]></failure>
-    <system-out><![CDATA[11:57:09.038 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest]: ExpenseTrackerH2IntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:57:09.164 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fintech.expensetracker.ExpenseTrackerApplication for test class com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
+    <system-out><![CDATA[15:00:14.340 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest]: ExpenseTrackerH2IntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:00:14.800 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fintech.expensetracker.ExpenseTrackerApplication for test class com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -89,82 +90,156 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.1)
 
-2025-08-18T11:57:09.625+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Starting ExpenseTrackerH2IntegrationTest using Java 21.0.8 with PID 3924 (started by bahadirbozoglu in /Users/bahadirbozoglu/Projects/Test/kiro-test)
-2025-08-18T11:57:09.626+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : The following 1 profile is active: "test"
-2025-08-18T11:57:10.334+03:00  INFO 3924 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-18T11:57:10.416+03:00  INFO 3924 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
-2025-08-18T11:57:10.950+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-18T11:57:11.018+03:00  INFO 3924 --- [expense-tracker-test] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-08-18T11:57:11.058+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-18T11:57:11.331+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-18T11:57:11.357+03:00  INFO 3924 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-18T11:57:11.551+03:00  INFO 3924 --- [expense-tracker-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-08-18T11:57:11.553+03:00  INFO 3924 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-18T11:57:11.583+03:00  WARN 3924 --- [expense-tracker-test] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-18T11:57:12.564+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-18T11:57:12.614+03:00  INFO 3924 --- [expense-tracker-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T11:57:12.915+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-18T11:57:14.109+03:00  WARN 3924 --- [expense-tracker-test] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-18T11:57:14.737+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-08-18T11:57:14.819+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-08-18T11:57:14.820+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-08-18T11:57:14.821+03:00  INFO 3924 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-08-18T11:57:14.842+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Started ExpenseTrackerH2IntegrationTest in 5.497 seconds (process running for 6.586)
-2025-08-18T11:57:14.846+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Initializing default categories...
-2025-08-18T11:57:14.969+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Default category not found, creating 'Uncategorized' category
-2025-08-18T11:57:15.050+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created default 'Uncategorized' category
-2025-08-18T11:57:15.124+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created 23 missing essential categories
-2025-08-18T11:57:15.138+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Database initialization complete. Total categories: 24
-2025-08-18T11:57:15.965+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
-2025-08-18T11:57:15.966+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
-2025-08-18T11:57:16.054+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 1
-2025-08-18T11:57:16.090+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: integration@example.com
-2025-08-18T11:57:16.214+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
-2025-08-18T11:57:16.214+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
-2025-08-18T11:57:16.217+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Registration failed - email already exists: integration@example.com
-2025-08-18T11:57:16.220+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Bad request exception: Email address is already in use
-2025-08-18T11:57:16.229+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
-2025-08-18T11:57:16.229+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
-2025-08-18T11:57:16.377+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User authenticated successfully: integration@example.com
-2025-08-18T11:57:16.378+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User authenticated successfully: integration@example.com
-2025-08-18T11:57:16.381+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
-2025-08-18T11:57:16.381+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
-2025-08-18T11:57:16.447+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Authentication failed for email: integration@example.com
-2025-08-18T11:57:16.448+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Authentication failed: Invalid email or password
-2025-08-18T11:57:16.494+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 1 with name: Integration Test Account
-2025-08-18T11:57:16.495+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 1
-2025-08-18T11:57:16.499+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 1 for user ID: 1
-2025-08-18T11:57:16.514+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 1 for user ID: 1
-2025-08-18T11:57:16.523+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
-2025-08-18T11:57:16.523+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
-2025-08-18T11:57:16.532+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
-2025-08-18T11:57:16.538+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
-2025-08-18T11:57:16.556+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Updating account ID: 1 for user ID: 1
-2025-08-18T11:57:16.557+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Updating account ID: 1 for user ID: 1
-2025-08-18T11:57:16.561+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully updated account ID: 1 for user ID: 1
-2025-08-18T11:57:16.574+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully updated account ID: 1 for user ID: 1
-2025-08-18T11:57:16.582+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 1 for user ID: 1
-2025-08-18T11:57:16.582+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 1 for user ID: 1
-2025-08-18T11:57:16.585+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculated balance for account ID: 1 is: 1500.00
-2025-08-18T11:57:16.586+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculated balance for account ID: 1 is: 1500.00
-2025-08-18T11:57:16.599+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 3000.00 and description: 'Monthly Salary'
-2025-08-18T11:57:16.600+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [3000.00], Type: [INCOME], Class: [java.math.BigDecimal]
-2025-08-18T11:57:16.600+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[3000.00], scale=[2], precision=[6], signum=[1]
-2025-08-18T11:57:16.604+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [3000.00], type: [INCOME]
-2025-08-18T11:57:16.604+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
-2025-08-18T11:57:16.604+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [3000.00] -> [3000.00] for type: [INCOME]
-2025-08-18T11:57:16.606+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 1 for user 1
-2025-08-18T11:57:16.607+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 1 for user ID: 1
-2025-08-18T11:57:16.618+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 1200.00 and description: 'Rent'
-2025-08-18T11:57:16.619+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [1200.00], Type: [EXPENSE], Class: [java.math.BigDecimal]
-2025-08-18T11:57:16.619+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[1200.00], scale=[2], precision=[6], signum=[1]
-2025-08-18T11:57:16.621+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [1200.00], type: [EXPENSE]
-2025-08-18T11:57:16.621+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
-2025-08-18T11:57:16.621+03:00  INFO 3924 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [1200.00] -> [-1200.00] for type: [EXPENSE]
-2025-08-18T11:57:16.631+03:00  WARN 3924 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Constraint violation: Validation failed for classes [com.fintech.expensetracker.entity.Transaction] during persist time for groups [jakarta.validation.groups.Default, ]
-List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='Amount must be greater than 0', propertyPath=amount, rootBeanClass=class com.fintech.expensetracker.entity.Transaction, messageTemplate='Amount must be greater than 0'}
-]
+2025-08-19T15:00:15.687+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Starting ExpenseTrackerH2IntegrationTest using Java 21.0.8 with PID 20797 (started by bahadirbozoglu in /Users/bahadirbozoglu/Projects/VScode/kiro-test/kiro-test)
+2025-08-19T15:00:15.690+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : The following 1 profile is active: "test"
+2025-08-19T15:00:16.973+03:00  INFO 20797 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19T15:00:17.089+03:00  INFO 20797 --- [expense-tracker-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2025-08-19T15:00:17.916+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19T15:00:18.013+03:00  INFO 20797 --- [expense-tracker-test] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-08-19T15:00:18.083+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-19T15:00:18.484+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19T15:00:18.532+03:00  INFO 20797 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-19T15:00:18.849+03:00  INFO 20797 --- [expense-tracker-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-08-19T15:00:18.851+03:00  INFO 20797 --- [expense-tracker-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-19T15:00:18.896+03:00  WARN 20797 --- [expense-tracker-test] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19T15:00:20.591+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19T15:00:20.717+03:00  INFO 20797 --- [expense-tracker-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T15:00:21.336+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-19T15:00:24.207+03:00  WARN 20797 --- [expense-tracker-test] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-19T15:00:25.197+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-19T15:00:25.290+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-19T15:00:25.290+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-19T15:00:25.292+03:00  INFO 20797 --- [expense-tracker-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-19T15:00:25.323+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.i.ExpenseTrackerH2IntegrationTest  : Started ExpenseTrackerH2IntegrationTest in 10.169 seconds (process running for 12.57)
+2025-08-19T15:00:25.327+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Initializing default categories...
+2025-08-19T15:00:25.506+03:00  WARN 20797 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Default category not found, creating 'Uncategorized' category
+2025-08-19T15:00:25.659+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created default 'Uncategorized' category
+2025-08-19T15:00:25.772+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Created 23 missing essential categories
+2025-08-19T15:00:25.792+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.config.DatabaseConfig              : Database initialization complete. Total categories: 24
+2025-08-19T15:00:26.887+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
+2025-08-19T15:00:26.888+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
+2025-08-19T15:00:27.007+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User registered successfully with ID: 1
+2025-08-19T15:00:27.043+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User registered successfully: integration@example.com
+2025-08-19T15:00:27.189+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Registration request received for email: integration@example.com
+2025-08-19T15:00:27.189+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to register user with email: integration@example.com
+2025-08-19T15:00:27.192+03:00  WARN 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Registration failed - email already exists: integration@example.com
+2025-08-19T15:00:27.197+03:00  WARN 20797 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Bad request exception: Email address is already in use
+2025-08-19T15:00:27.210+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
+2025-08-19T15:00:27.211+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
+2025-08-19T15:00:27.435+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : User authenticated successfully: integration@example.com
+2025-08-19T15:00:27.435+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : User authenticated successfully: integration@example.com
+2025-08-19T15:00:27.439+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AuthController          : Login request received for email: integration@example.com
+2025-08-19T15:00:27.440+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Attempting to authenticate user with email: integration@example.com
+2025-08-19T15:00:27.537+03:00  WARN 20797 --- [expense-tracker-test] [           main] c.f.expensetracker.service.UserService   : Authentication failed for email: integration@example.com
+2025-08-19T15:00:27.538+03:00  WARN 20797 --- [expense-tracker-test] [           main] c.f.e.exception.GlobalExceptionHandler   : Authentication failed: Invalid email or password
+2025-08-19T15:00:27.592+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Creating account for user ID: 1 with name: Integration Test Account
+2025-08-19T15:00:27.592+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Creating account for user ID: 1
+2025-08-19T15:00:27.597+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully created account with ID: 1 for user ID: 1
+2025-08-19T15:00:27.623+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully created account ID: 1 for user ID: 1
+2025-08-19T15:00:27.637+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieving accounts for user ID: 1
+2025-08-19T15:00:27.637+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Retrieving accounts for user ID: 1
+2025-08-19T15:00:27.652+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Found 1 accounts for user ID: 1
+2025-08-19T15:00:27.660+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Retrieved 1 accounts for user ID: 1
+2025-08-19T15:00:27.684+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Updating account ID: 1 for user ID: 1
+2025-08-19T15:00:27.685+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Updating account ID: 1 for user ID: 1
+2025-08-19T15:00:27.691+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Successfully updated account ID: 1 for user ID: 1
+2025-08-19T15:00:27.713+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Successfully updated account ID: 1 for user ID: 1
+2025-08-19T15:00:27.722+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 1 for user ID: 1
+2025-08-19T15:00:27.723+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 1 for user ID: 1
+2025-08-19T15:00:27.727+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculated balance for account ID: 1 is: 1500.00
+2025-08-19T15:00:27.728+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculated balance for account ID: 1 is: 1500.00
+2025-08-19T15:00:27.746+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 3000.00 and description: 'Monthly Salary'
+2025-08-19T15:00:27.746+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [3000.00], Type: [INCOME], Class: [java.math.BigDecimal]
+2025-08-19T15:00:27.746+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[3000.00], scale=[2], precision=[6], signum=[1]
+2025-08-19T15:00:27.751+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [3000.00], type: [INCOME]
+2025-08-19T15:00:27.751+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.752+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [3000.00] -> [3000.00] for type: [INCOME]
+2025-08-19T15:00:27.755+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 1 for user 1
+2025-08-19T15:00:27.756+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 1 for user ID: 1
+2025-08-19T15:00:27.772+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 1200.00 and description: 'Rent'
+2025-08-19T15:00:27.772+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [1200.00], Type: [EXPENSE], Class: [java.math.BigDecimal]
+2025-08-19T15:00:27.772+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[1200.00], scale=[2], precision=[6], signum=[1]
+2025-08-19T15:00:27.776+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [1200.00], type: [EXPENSE]
+2025-08-19T15:00:27.776+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.776+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [1200.00] -> [-1200.00] for type: [EXPENSE]
+2025-08-19T15:00:27.778+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 2 for user 1
+2025-08-19T15:00:27.779+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 2 for user ID: 1
+2025-08-19T15:00:27.786+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 300.00 and description: 'Groceries'
+2025-08-19T15:00:27.787+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [300.00], Type: [EXPENSE], Class: [java.math.BigDecimal]
+2025-08-19T15:00:27.787+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[300.00], scale=[2], precision=[5], signum=[1]
+2025-08-19T15:00:27.790+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [300.00], type: [EXPENSE]
+2025-08-19T15:00:27.790+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.791+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [300.00] -> [-300.00] for type: [EXPENSE]
+2025-08-19T15:00:27.792+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 3 for user 1
+2025-08-19T15:00:27.793+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 3 for user ID: 1
+2025-08-19T15:00:27.802+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 150.00 and description: 'Utilities'
+2025-08-19T15:00:27.802+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [150.00], Type: [EXPENSE], Class: [java.math.BigDecimal]
+2025-08-19T15:00:27.802+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[150.00], scale=[2], precision=[5], signum=[1]
+2025-08-19T15:00:27.806+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [150.00], type: [EXPENSE]
+2025-08-19T15:00:27.807+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.807+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [150.00] -> [-150.00] for type: [EXPENSE]
+2025-08-19T15:00:27.812+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 4 for user 1
+2025-08-19T15:00:27.815+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 4 for user ID: 1
+2025-08-19T15:00:27.823+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Creating transaction for user ID: 1 with amount: 200.00 and description: 'Transportation'
+2025-08-19T15:00:27.824+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount received: [200.00], Type: [EXPENSE], Class: [java.math.BigDecimal]
+2025-08-19T15:00:27.824+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount details: value=[200.00], scale=[2], precision=[5], signum=[1]
+2025-08-19T15:00:27.828+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [200.00], type: [EXPENSE]
+2025-08-19T15:00:27.828+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.828+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [200.00] -> [-200.00] for type: [EXPENSE]
+2025-08-19T15:00:27.830+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Created transaction with ID 5 for user 1
+2025-08-19T15:00:27.831+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully created transaction ID: 5 for user ID: 1
+2025-08-19T15:00:27.842+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieving transactions for user ID: 1 with filters - page: 0, size: 20
+2025-08-19T15:00:27.864+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Retrieved 5 transactions for user ID: 1 (page 1/1)
+2025-08-19T15:00:27.893+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Updating transaction ID: 1 for user ID: 1
+2025-08-19T15:00:27.898+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Transaction update audit - User: 1, Transaction ID: 1, Original: [amount=3000.00, description='Monthly Salary', date=2025-08-19, account=1, category=1], Update request: UpdateTransactionRequest{amount=3200.00, description='Updated Monthly Salary', transactionDate=null, accountId=null, categoryId=null, type=INCOME}
+2025-08-19T15:00:27.901+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - convertAmountByType called with amount: [3200.00], type: [INCOME]
+2025-08-19T15:00:27.901+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Amount comparison with zero: amount.compareTo(BigDecimal.ZERO) = [1]
+2025-08-19T15:00:27.901+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : DEBUG - Converted amount: [3200.00] -> [3200.00] for type: [INCOME]
+2025-08-19T15:00:27.901+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.TransactionService         : Updated transaction with ID 1 for user 1
+2025-08-19T15:00:27.905+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.TransactionController   : Successfully updated transaction ID: 1 for user ID: 1
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/transactions/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"131"]
+             Body = {"amount":3200.00,"description":"Updated Monthly Salary","transactionDate":null,"accountId":null,"categoryId":null,"type":"INCOME"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#updateTransaction(Long, UpdateTransactionRequest, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":1,"amount":3200.00,"description":"Updated Monthly Salary","transactionDate":"2025-08-19","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-19T15:00:27.753449","updatedAt":"2025-08-19T15:00:27.753478"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2025-08-19T15:00:27.919+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculating balance for account ID: 1 for user ID: 1
+2025-08-19T15:00:27.919+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculating balance for account ID: 1 for user ID: 1
+2025-08-19T15:00:27.925+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.service.AccountService             : Calculated balance for account ID: 1 is: 2850.00
+2025-08-19T15:00:27.926+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AccountController       : Calculated balance for account ID: 1 is: 2850.00
+2025-08-19T15:00:27.946+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AnalyticsController     : Retrieving monthly spending summary for user ID: 1 and month: 2025-08
+2025-08-19T15:00:27.957+03:00  INFO 20797 --- [expense-tracker-test] [           main] c.f.e.controller.AnalyticsController     : Retrieved monthly spending summary for user ID: 1 and month: 2025-08 - Income: 3200.00, Expenses: 1850.00, Savings: 1350.00
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -198,7 +273,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug","tokenType":"Bearer","expiresIn":86400,"user":{"id":1,"email":"integration@example.com","name":"Integration Test User","createdAt":"2025-08-18T11:57:16.051589"}}
+             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ","tokenType":"Bearer","expiresIn":86400,"user":{"id":1,"email":"integration@example.com","name":"Integration Test User","createdAt":"2025-08-19T15:00:27.00423"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -235,7 +310,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-18T11:57:16.221249","status":400,"error":"Bad Request","message":"Email address is already in use","path":"/api/v1/auth/register","details":null}
+             Body = {"timestamp":"2025-08-19T15:00:27.198722","status":400,"error":"Bad Request","message":"Email address is already in use","path":"/api/v1/auth/register","details":null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -272,7 +347,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug","tokenType":"Bearer","expiresIn":86400,"user":{"id":1,"email":"integration@example.com","name":"Integration Test User","createdAt":"2025-08-18T11:57:16.051589"}}
+             Body = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ","tokenType":"Bearer","expiresIn":86400,"user":{"id":1,"email":"integration@example.com","name":"Integration Test User","createdAt":"2025-08-19T15:00:27.00423"}}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -309,7 +384,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-18T11:57:16.44843","status":401,"error":"Authentication Failed","message":"Invalid credentials provided","path":"/api/v1/auth/login","details":null}
+             Body = {"timestamp":"2025-08-19T15:00:27.538534","status":401,"error":"Authentication Failed","message":"Invalid credentials provided","path":"/api/v1/auth/login","details":null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -354,7 +429,7 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug", Content-Length:"78"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"78"]
              Body = {"name":"Integration Test Account","type":"CHECKING","initialBalance":1500.00}
     Session Attrs = {}
 
@@ -382,7 +457,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":1,"name":"Integration Test Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-18T11:57:16.49747","updatedAt":"2025-08-18T11:57:16.49749"}
+             Body = {"id":1,"name":"Integration Test Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-19T15:00:27.595463","updatedAt":"2025-08-19T15:00:27.595492"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -391,7 +466,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/accounts
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ"]
              Body = null
     Session Attrs = {}
 
@@ -419,7 +494,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = [{"id":1,"name":"Integration Test Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-18T11:57:16.49747","updatedAt":"2025-08-18T11:57:16.49749"}]
+             Body = [{"id":1,"name":"Integration Test Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-19T15:00:27.595463","updatedAt":"2025-08-19T15:00:27.595492"}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -428,7 +503,7 @@ MockHttpServletRequest:
       HTTP Method = PUT
       Request URI = /api/v1/accounts/1
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug", Content-Length:"72"]
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"72"]
              Body = {"name":"Updated Integration Account","type":null,"initialBalance":null}
     Session Attrs = {}
 
@@ -456,7 +531,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-18T11:57:16.49747","updatedAt":"2025-08-18T11:57:16.564574"}
+             Body = {"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":1500.00,"currentBalance":1500.00,"createdAt":"2025-08-19T15:00:27.595463","updatedAt":"2025-08-19T15:00:27.696373"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -465,7 +540,7 @@ MockHttpServletRequest:
       HTTP Method = GET
       Request URI = /api/v1/accounts/1/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug"]
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ"]
              Body = null
     Session Attrs = {}
 
@@ -502,8 +577,8 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug", Content-Length:"128"]
-             Body = {"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-18","accountId":1,"categoryId":null,"type":"INCOME"}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"128"]
+             Body = {"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-19","accountId":1,"categoryId":null,"type":"INCOME"}
     Session Attrs = {}
 
 Handler:
@@ -530,7 +605,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-18","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-18T11:57:16.605807","updatedAt":"2025-08-18T11:57:16.605829"}
+             Body = {"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-19","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-19T15:00:27.753449","updatedAt":"2025-08-19T15:00:27.753478"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -539,8 +614,8 @@ MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/v1/transactions
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NTA3NDM2LCJleHAiOjE3NTU1MTEwMzZ9.-pLE56eVfEgnqVKj2ajpXDDsjGc7-Obe_jcV4DE6bgcJ_pIhYQQAKh5RanPpYjhjTcVVfJuZU0edyBynuAvhug", Content-Length:"119"]
-             Body = {"amount":1200.00,"description":"Rent","transactionDate":"2025-08-17","accountId":1,"categoryId":null,"type":"EXPENSE"}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"119"]
+             Body = {"amount":1200.00,"description":"Rent","transactionDate":"2025-08-18","accountId":1,"categoryId":null,"type":"EXPENSE"}
     Session Attrs = {}
 
 Handler:
@@ -552,7 +627,7 @@ Async:
      Async result = null
 
 Resolved Exception:
-             Type = jakarta.validation.ConstraintViolationException
+             Type = null
 
 ModelAndView:
         View name = null
@@ -563,11 +638,270 @@ FlashMap:
        Attributes = null
 
 MockHttpServletResponse:
-           Status = 400
+           Status = 201
     Error message = null
           Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
      Content type = application/json
-             Body = {"timestamp":"2025-08-18T11:57:16.632055","status":400,"error":"Validation Error","message":"Constraint validation failed","path":"/api/v1/transactions","details":{"amount":"Amount must be greater than 0"}}
+             Body = {"id":2,"amount":-1200.00,"description":"Rent","transactionDate":"2025-08-18","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.77724","updatedAt":"2025-08-19T15:00:27.777283"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/transactions
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"123"]
+             Body = {"amount":300.00,"description":"Groceries","transactionDate":"2025-08-17","accountId":1,"categoryId":null,"type":"EXPENSE"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#createTransaction(CreateTransactionRequest, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":3,"amount":-300.00,"description":"Groceries","transactionDate":"2025-08-17","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.79164","updatedAt":"2025-08-19T15:00:27.79166"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/transactions
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"123"]
+             Body = {"amount":150.00,"description":"Utilities","transactionDate":"2025-08-16","accountId":1,"categoryId":null,"type":"EXPENSE"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#createTransaction(CreateTransactionRequest, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":4,"amount":-150.00,"description":"Utilities","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.808117","updatedAt":"2025-08-19T15:00:27.808172"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/transactions
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"128"]
+             Body = {"amount":200.00,"description":"Transportation","transactionDate":"2025-08-15","accountId":1,"categoryId":null,"type":"EXPENSE"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#createTransaction(CreateTransactionRequest, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":5,"amount":-200.00,"description":"Transportation","transactionDate":"2025-08-15","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.829675","updatedAt":"2025-08-19T15:00:27.829704"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/transactions
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#getUserTransactions(UserPrincipal, Long, Long, String, String, String, String, String, int, int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"content":[{"id":1,"amount":3000.00,"description":"Monthly Salary","transactionDate":"2025-08-19","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-19T15:00:27.753449","updatedAt":"2025-08-19T15:00:27.753478"},{"id":2,"amount":-1200.00,"description":"Rent","transactionDate":"2025-08-18","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.77724","updatedAt":"2025-08-19T15:00:27.777283"},{"id":3,"amount":-300.00,"description":"Groceries","transactionDate":"2025-08-17","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.79164","updatedAt":"2025-08-19T15:00:27.79166"},{"id":4,"amount":-150.00,"description":"Utilities","transactionDate":"2025-08-16","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.808117","updatedAt":"2025-08-19T15:00:27.808172"},{"id":5,"amount":-200.00,"description":"Transportation","transactionDate":"2025-08-15","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"EXPENSE","createdAt":"2025-08-19T15:00:27.829675","updatedAt":"2025-08-19T15:00:27.829704"}],"pageable":{"pageNumber":0,"pageSize":20,"sort":{"empty":false,"sorted":true,"unsorted":false},"offset":0,"unpaged":false,"paged":true},"last":true,"totalPages":1,"totalElements":5,"size":20,"number":0,"sort":{"empty":false,"sorted":true,"unsorted":false},"first":true,"numberOfElements":5,"empty":false}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/transactions/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ", Content-Length:"131"]
+             Body = {"amount":3200.00,"description":"Updated Monthly Salary","transactionDate":null,"accountId":null,"categoryId":null,"type":"INCOME"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.TransactionController
+           Method = com.fintech.expensetracker.controller.TransactionController#updateTransaction(Long, UpdateTransactionRequest, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":1,"amount":3200.00,"description":"Updated Monthly Salary","transactionDate":"2025-08-19","account":{"id":1,"name":"Updated Integration Account","type":"CHECKING","initialBalance":null,"currentBalance":null,"createdAt":null,"updatedAt":null},"category":{"id":1,"name":"Uncategorized","description":"Default category for transactions without a specific category","default":true},"type":"INCOME","createdAt":"2025-08-19T15:00:27.753449","updatedAt":"2025-08-19T15:00:27.753478"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/accounts/1/balance
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.AccountController
+           Method = com.fintech.expensetracker.controller.AccountController#getAccountBalance(Long, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"accountId":1,"balance":2850.00}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/v1/analytics/monthly-summary
+       Parameters = {month=[2025-08]}
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzU1NjA0ODI3LCJleHAiOjE3NTU2MDg0Mjd9.V8iNr64tIVu17a222BtUB3Z3we0KxvqJ77tsuNfWqB414WZ9JZK5b6zL22xCELdP9YdBDaCGFnAGKfuVfDmkJQ"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.fintech.expensetracker.controller.AnalyticsController
+           Method = com.fintech.expensetracker.controller.AnalyticsController#getMonthlySpendingSummary(YearMonth, UserPrincipal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"month":"2025-08","totalIncome":3200.00,"totalExpenses":1850.00,"netSavings":1350.00,"savingsRate":42.19}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []

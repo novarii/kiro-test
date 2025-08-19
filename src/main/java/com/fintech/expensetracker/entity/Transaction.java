@@ -24,7 +24,7 @@ public class Transaction {
     
     @Column(nullable = false, precision = 19, scale = 2)
     @NotNull(message = "Amount is required")
-    @DecimalMin(value = "0.01", message = "Amount must be greater than 0")
+    // @DecimalMin(value = "0.01", message = "Amount must be greater than 0")
     private BigDecimal amount; // Positive for income, negative for expenses
     
     @Column(nullable = false)

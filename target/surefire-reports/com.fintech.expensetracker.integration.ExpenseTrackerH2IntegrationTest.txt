@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.413 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
-com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow -- Time elapsed: 1.853 s <<< FAILURE!
-java.lang.AssertionError: JSON path "$.length()" expected:<5> but was:<11>
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.982 s <<< FAILURE! -- in com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest
+com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow -- Time elapsed: 1.739 s <<< FAILURE!
+java.lang.AssertionError: JSON path "$.totalIncome" expected:<0.0> but was:<123.46>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
 	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:123)
 	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:355)
+	at com.fintech.expensetracker.integration.ExpenseTrackerH2IntegrationTest.shouldCompleteFullIntegrationWorkflow(ExpenseTrackerH2IntegrationTest.java:455)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

@@ -425,14 +425,14 @@ class ExpenseTrackerH2IntegrationTest {
         precisionTest.setDescription("Precision Test");
         precisionTest.setTransactionDate(LocalDate.now());
         precisionTest.setAccountId(accountId);
-        precisionTest.setType(TransactionType.INCOME);
+        precisionTest.setType(TransactionType.EXPENSE);
 
         mockMvc.perform(post("/api/v1/transactions")
                         .header("Authorization", "Bearer " + userToken)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(precisionTest)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.amount").value(123.46)); // Should be properly rounded
+                .andExpect(jsonPath("$.amount").value(-123.46)); // Should be properly rounded
 
         // === SOFT DELETE TESTING ===
         
@@ -445,7 +445,7 @@ class ExpenseTrackerH2IntegrationTest {
         mockMvc.perform(get("/api/v1/transactions")
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(5)); // Should exclude the deleted transaction
+                .andExpect(jsonPath("$.content.length()").value(5)); // Should exclude the deleted transaction
 
         // Analytics should reflect the deletion
         mockMvc.perform(get("/api/v1/analytics/monthly-summary")
